@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>你的申請 @Model.CourseName 已建立</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>你好，@Model.DisplayName,<br /></p>
+        <p>
+            你的 @Model.CourseName 申請已建立。請點擊<a href="@Model.ActivationLink">此處</a>以登入及並在遞交申請前更新你的申請資料。<br /><br />
+        </p>
+        <p>
+            謝謝!<br />
+            建造專業進修院校(SPDC)<br />
+            香港建造學院<br />
+        </p>
+    </div>
+</body>
+</html>

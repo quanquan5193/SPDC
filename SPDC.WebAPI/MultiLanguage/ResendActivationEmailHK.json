@@ -1,0 +1,8 @@
+{
+  "resend_activation_email_label": "重新發送確認電郵",
+  "login_email_address_label": "帳號電郵",
+  "resend_activation_email_button": "重新發送確認電郵",
+  "back_label": "返回",
+  "invalid_email_address_resend_message_label": "無效的帳號電郵",
+  "enter_email_address_resend_message_label": "請輸入帳號電郵"
+}

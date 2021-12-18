@@ -1,0 +1,14 @@
+{
+  "success_title_label": "Create Account",
+  "account_success_title_label": "Create Account -Success",
+  "account_success_content_label": "You will receive an activation email. Please click the link in the activation email to activare your account.",
+  "btn_label": "OK",
+  "email_exist_error_msg": "This email already existed",
+  "hkid_passport_missing_error_msg": "You have to provide HKID or Passport and Expired Date",
+  "hkid_passport_exist_error_msg": "CICNumber, HKid, MobileNumber or PassportNo is existed",
+  "create_failure_msg": "Create user failed",
+  "create_success_msg": "Create Account -Success",
+  "send_mail_error_msg": "Send email was failed",
+  "new_and_confirm_password_different": "The new password and confirmation password do not match.",
+  "pass_and_confrim_password_different": "The password and confirmation password do not match."
+}

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Notification on Ineligible for Attending the Examination @Model.ClassCode</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hello @Model.DisplayName,<br /></p>
+        <p>
+            @Model.CourseName <br />
+            Notification on Ineligible for Attending the Examination @Model.ClassCode
+        </p>
+        <p>
+            Please be informed that you have failed to fulfill the attendance requirement of captioned course and therefore ineligible for attending the examination to be held on @Model.Date.<br />
+            Please find the attached notification for details.<br />
+            Should you have enquiry, please contact us at telephone: 2100 900 or email: spdc@hkic.edu.hk<br />
+            <br />
+            Thank you.<br />
+
+            School of Professional Development in Construction (SPDC)<br />
+            Hong Kong Institute of Construction (HKIC)<br />
+        </p>
+    </div>
+</body>
+</html>

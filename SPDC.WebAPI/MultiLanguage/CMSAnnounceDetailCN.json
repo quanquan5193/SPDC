@@ -1,0 +1,22 @@
+{
+  "created_by": "Created By: _CN",
+  "created_on": "Created On: _CN",
+  "last_updated_on": "Last Updated On: _CN",
+  "show_on_landing": "Show on Landing Page? _CN",
+  "display_on": "Display on _CN",
+  "preview_detail": "Preview Detail _CN",
+  "approve": "Approve _CN",
+  "unapprove": "Unapprove _CN",
+  "publish": "Publish _CN",
+  "unpublish": "Unpublish _CN",
+  "no": "No _CN",
+  "yes": "Yes _CN",
+  "actions": "Actions _CN",
+  "website": "Website _CN",
+  "mobile": "Mobile _CN",
+  "both": "Both _CN",
+  "release_date": "Release Date_CN",
+  "invalid_release_date": "Invalid Release Date_CN",
+  "end_date": "End Date_CN",
+  "invalid_end_date": "Invalid End Date_CN"
+}

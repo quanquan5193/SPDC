@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3C7BF9D-444C-4F3B-BACE-67565CB9D83C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPDC.WebAPI</RootNamespace>
+    <AssemblyName>SPDC.WebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44307</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MixedRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.7.10.0\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.AspNet, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.AspNet.0.2.0\lib\net45\Hangfire.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.7.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.7.19\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.7.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.7.19\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.7.1\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.7.1\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.7.1\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.1.0\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.2\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.2\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.2\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.2\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.7.10.0\lib\net461\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.7.1\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApiControllerBase.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\ApplicationSetupController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\CMSContentController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\EnrollmentController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
+    <Compile Include="Controllers\FullTextSearchController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguagesController.cs" />
+    <Compile Include="Controllers\MockController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\ParticularController.cs" />
+    <Compile Include="Controllers\QualificationController.cs" />
+    <Compile Include="Controllers\RecommendationController.cs" />
+    <Compile Include="Controllers\SettingUpController.cs" />
+    <Compile Include="Controllers\ApplicationManagementController.cs" />
+    <Compile Include="Controllers\UploadFileController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserSubscriptionController.cs" />
+    <Compile Include="Controllers\VersionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BindingModelHelper.cs" />
+    <Compile Include="Helpers\ElasticSearchClient.cs" />
+    <Compile Include="Helpers\EnrollmentUpdater.cs" />
+    <Compile Include="Helpers\FireBackgroundTaskHelper.cs" />
+    <Compile Include="Helpers\Log.cs" />
+    <Compile Include="LogMetadata.cs" />
+    <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\ActionResultModel.cs" />
+    <Compile Include="Models\NotificationEmailBindingModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Providers\AppRefreshTokenProvider.cs" />
+    <Compile Include="Providers\CustomExceptionFilter.cs" />
+    <Compile Include="RequestLogHandler.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\default\default.jpg" />
+    <Content Include="images\email\Bottom.jpg" />
+    <Content Include="images\email\Top.jpg" />
+    <Content Include="images\InvoiceTemplate\invoice.html" />
+    <Content Include="images\InvoiceTemplate\invoice_chop_spdc.png" />
+    <Content Include="images\InvoiceTemplate\logo_spdc.png" />
+    <Content Include="images\InvoiceTemplate\paymentCN.html" />
+    <Content Include="images\InvoiceTemplate\paymentEN.html" />
+    <Content Include="images\InvoiceTemplate\receipt.html" />
+    <Content Include="MultiLanguage\AccountInfimationCN.json" />
+    <Content Include="MultiLanguage\AccountInfimationEN.json" />
+    <Content Include="MultiLanguage\AccountInfimationHK.json" />
+    <Content Include="MultiLanguage\AdminManagementCN.json" />
+    <Content Include="MultiLanguage\AdminManagementEN.json" />
+    <Content Include="MultiLanguage\AdminManagementHK.json" />
+    <Content Include="MultiLanguage\AnnouncementDetailCN.json" />
+    <Content Include="MultiLanguage\AnnouncementDetailEN.json" />
+    <Content Include="MultiLanguage\AnnouncementDetailHK.json" />
+    <Content Include="MultiLanguage\ApplicationFormSetupCN.json" />
+    <Content Include="MultiLanguage\ApplicationFormSetupEN.json" />
+    <Content Include="MultiLanguage\ApplicationFormSetupHK.json" />
+    <Content Include="MultiLanguage\ApplicationStep6CN.json" />
+    <Content Include="MultiLanguage\ApplicationStep6EN.json" />
+    <Content Include="MultiLanguage\ApplicationStep6HK.json" />
+    <Content Include="MultiLanguage\ChangePasswordCN.json" />
+    <Content Include="MultiLanguage\ChangePasswordEN.json" />
+    <Content Include="MultiLanguage\ChangePasswordHK.json" />
+    <Content Include="MultiLanguage\ClassSetupCN.json" />
+    <Content Include="MultiLanguage\ClassSetupEN.json" />
+    <Content Include="MultiLanguage\ClassSetupHK.json" />
+    <Content Include="MultiLanguage\CMSAnnounceDetailCN.json" />
+    <Content Include="MultiLanguage\CMSAnnounceDetailEN.json" />
+    <Content Include="MultiLanguage\CMSAnnounceDetailHK.json" />
+    <Content Include="MultiLanguage\CMSClassCN.json" />
+    <Content Include="MultiLanguage\CMSClassEN.json" />
+    <Content Include="MultiLanguage\CMSClassHK.json" />
+    <Content Include="MultiLanguage\CMSCN.json" />
+    <Content Include="MultiLanguage\CMSCourseSetupCN.json" />
+    <Content Include="MultiLanguage\CMSCourseSetupEN.json" />
+    <Content Include="MultiLanguage\CMSCourseSetupHK.json" />
+    <Content Include="MultiLanguage\CMSEN.json" />
+    <Content Include="MultiLanguage\CMSEventsCN.json" />
+    <Content Include="MultiLanguage\CMSEventsEN.json" />
+    <Content Include="MultiLanguage\CMSEventsHK.json" />
+    <Content Include="MultiLanguage\CMSFormSetupCN.json" />
+    <Content Include="MultiLanguage\CMSFormSetupEN.json" />
+    <Content Include="MultiLanguage\CMSFormSetupHK.json" />
+    <Content Include="MultiLanguage\CMSHK.json" />
+    <Content Include="MultiLanguage\CMSInclementWeatherEN.json" />
+    <Content Include="MultiLanguage\CMSMainCourseCN.json" />
+    <Content Include="MultiLanguage\CMSMainCourseEN.json" />
+    <Content Include="MultiLanguage\CMSMainCourseHK.json" />
+    <Content Include="MultiLanguage\CMSStudentAccountManagementCN.json" />
+    <Content Include="MultiLanguage\CMSStudentAccountManagementEN.json" />
+    <Content Include="MultiLanguage\CMSStudentAccountManagementHK.json" />
+    <Content Include="MultiLanguage\CMSStudentClassManagementCN.json" />
+    <Content Include="MultiLanguage\CMSStudentClassManagementEN.json" />
+    <Content Include="MultiLanguage\CMSStudentClassManagementHK.json" />
+    <Content Include="MultiLanguage\ContentManagementCN.json" />
+    <Content Include="MultiLanguage\ContentManagementEN.json" />
+    <Content Include="MultiLanguage\ContentManagementHK.json" />
+    <Content Include="MultiLanguage\CourseManagementCN.json" />
+    <Content Include="MultiLanguage\CourseManagementEN.json" />
+    <Content Include="MultiLanguage\CourseManagementHK.json" />
+    <Content Include="MultiLanguage\CourseSearchCN.json" />
+    <Content Include="MultiLanguage\CourseSearchDetailCN.json" />
+    <Content Include="MultiLanguage\CourseSearchDetailEN.json" />
+    <Content Include="MultiLanguage\CourseSearchDetailHK.json" />
+    <Content Include="MultiLanguage\CourseSearchEN.json" />
+    <Content Include="MultiLanguage\CourseSearchHK.json" />
+    <Content Include="MultiLanguage\CourseSetupCN.json" />
+    <Content Include="MultiLanguage\CourseSetupEN.json" />
+    <Content Include="MultiLanguage\CourseSetupHK.json" />
+    <Content Include="MultiLanguage\CreateAccountCN.json" />
+    <Content Include="MultiLanguage\CreateAccountEN.json" />
+    <Content Include="MultiLanguage\CreateAccountHK.json" />
+    <Content Include="MultiLanguage\CreateAdminAccountCN.json" />
+    <Content Include="MultiLanguage\CreateAdminAccountEN.json" />
+    <Content Include="MultiLanguage\CreateAdminAccountHK.json" />
+    <Content Include="MultiLanguage\CretateAccountSuccessCN.json" />
+    <Content Include="MultiLanguage\CretateAccountSuccessEN.json" />
+    <Content Include="MultiLanguage\CretateAccountSuccessHK.json" />
+    <Content Include="MultiLanguage\DeleteDialogCN.json" />
+    <Content Include="MultiLanguage\DeleteDialogEN.json" />
+    <Content Include="MultiLanguage\DeleteDialogHK.json" />
+    <Content Include="MultiLanguage\EntityValidationMessageCN.json" />
+    <Content Include="MultiLanguage\EntityValidationMessageEN.json" />
+    <Content Include="MultiLanguage\EntityValidationMessageHK.json" />
+    <Content Include="MultiLanguage\ForgotLoginEmailCN.json" />
+    <Content Include="MultiLanguage\ForgotLoginEmailEN.json" />
+    <Content Include="MultiLanguage\ForgotLoginEmailHK.json" />
+    <Content Include="MultiLanguage\ForgotPasswordCN.json" />
+    <Content Include="MultiLanguage\ForgotPasswordEN.json" />
+    <Content Include="MultiLanguage\ForgotPasswordHK.json" />
+    <Content Include="MultiLanguage\HotCourseDetailCN.json" />
+    <Content Include="MultiLanguage\HotCourseDetailEN.json" />
+    <Content Include="MultiLanguage\HotCourseDetailHK.json" />
+    <Content Include="MultiLanguage\LadingPageCN.json" />
+    <Content Include="MultiLanguage\LadingPageEN.json" />
+    <Content Include="MultiLanguage\LadingPageHK.json" />
+    <Content Include="MultiLanguage\LoginAdminCN.json" />
+    <Content Include="MultiLanguage\LoginAdminEN.json" />
+    <Content Include="MultiLanguage\LoginAdminHK.json" />
+    <Content Include="MultiLanguage\LoginCN.json" />
+    <Content Include="MultiLanguage\LoginEN.json" />
+    <Content Include="MultiLanguage\LoginHK.json" />
+    <Content Include="MultiLanguage\MakeupClassCN.json" />
+    <Content Include="MultiLanguage\MakeupClassEN.json" />
+    <Content Include="MultiLanguage\MakeupClassHK.json" />
+    <Content Include="MultiLanguage\MembershipsQualificationsCN.json" />
+    <Content Include="MultiLanguage\MembershipsQualificationsEN.json" />
+    <Content Include="MultiLanguage\MembershipsQualificationsHK.json" />
+    <Content Include="MultiLanguage\MyCourseApplicationsCN.json" />
+    <Content Include="MultiLanguage\MyCourseApplicationsEN.json" />
+    <Content Include="MultiLanguage\MyCourseApplicationsHK.json" />
+    <Content Include="MultiLanguage\NavigationMenuCN.json" />
+    <Content Include="MultiLanguage\NavigationMenuEN.json" />
+    <Content Include="MultiLanguage\NavigationMenuHK.json" />
+    <Content Include="MultiLanguage\NewEventDetailCN.json" />
+    <Content Include="MultiLanguage\NewEventDetailEN.json" />
+    <Content Include="MultiLanguage\NewEventDetailHK.json" />
+    <Content Include="MultiLanguage\PersonalParticularCN.json" />
+    <Content Include="MultiLanguage\PersonalParticularEN.json" />
+    <Content Include="MultiLanguage\PersonalParticularHK.json" />
+    <Content Include="MultiLanguage\ProgressionAdvancementDetailCN.json" />
+    <Content Include="MultiLanguage\ProgressionAdvancementDetailEN.json" />
+    <Content Include="MultiLanguage\ProgressionAdvancementDetailHK.json" />
+    <Content Include="MultiLanguage\RecomendationEmployerCN.json" />
+    <Content Include="MultiLanguage\RecomendationEmployerEN.json" />
+    <Content Include="MultiLanguage\RecomendationEmployerHK.json" />
+    <Content Include="MultiLanguage\ResendActivationEmailCN.json" />
+    <Content Include="MultiLanguage\ResendActivationEmailEN.json" />
+    <Content Include="MultiLanguage\ResendActivationEmailHK.json" />
+    <Content Include="MultiLanguage\ResetPasswordCN.json" />
+    <Content Include="MultiLanguage\ResetPasswordEN.json" />
+    <Content Include="MultiLanguage\ResetPasswordHK.json" />
+    <Content Include="MultiLanguage\ServerMessagesCN.json" />
+    <Content Include="MultiLanguage\ServerMessagesEN.json" />
+    <Content Include="MultiLanguage\ServerMessagesHK.json" />
+    <Content Include="MultiLanguage\StemAllianceDetailCN.json" />
+    <Content Include="MultiLanguage\StemAllianceDetailEN.json" />
+    <Content Include="MultiLanguage\StemAllianceDetailHK.json" />
+    <Content Include="MultiLanguage\SupportingDocumentCN.json" />
+    <Content Include="MultiLanguage\SupportingDocumentEN.json" />
+    <Content Include="MultiLanguage\SupportingDocumentHK.json" />
+    <Content Include="MultiLanguage\TermOfUserCN.json" />
+    <Content Include="MultiLanguage\TermOfUserEN.json" />
+    <Content Include="MultiLanguage\TermOfUserHK.json" />
+    <Content Include="MultiLanguage\WorkingExperienceCN.json" />
+    <Content Include="MultiLanguage\WorkingExperienceEN.json" />
+    <Content Include="MultiLanguage\WorkingExperienceHK.json" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include=".editorconfig" />
+    <Content Include="images\BatchAppliction\SPDC_Batch_Application_Template_v1.xlsx" />
+    <Content Include="MultiLanguage\EnrollmentCalendarEN.json" />
+    <Content Include="MultiLanguage\EnrollmentDetailDialogEN.json" />
+    <Content Include="MultiLanguage\EnrollmentInvoiceDialogEN.json" />
+    <Content Include="MultiLanguage\EnrollmentCalendarCN.json" />
+    <Content Include="MultiLanguage\EnrollmentCalendarHK.json" />
+    <Content Include="MultiLanguage\EnrollmentDetailDialogCN.json" />
+    <Content Include="MultiLanguage\EnrollmentDetailDialogHK.json" />
+    <Content Include="MultiLanguage\EnrollmentInvoiceDialogCN.json" />
+    <Content Include="MultiLanguage\EnrollmentInvoiceDialogHK.json" />
+    <Content Include="MultiLanguage\CommonEN.json" />
+    <Content Include="MultiLanguage\CommonCN.json" />
+    <Content Include="MultiLanguage\CommonHK.json" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\EmailSubjects\EmailSubjectEN.json" />
+    <Content Include="Templates\EmailSubjects\EmailSubjectTC.json" />
+    <Content Include="Templates\Emails\Item10EN.cshtml" />
+    <Content Include="Templates\Emails\Item1EN.cshtml" />
+    <Content Include="Templates\Emails\Item1TC.cshtml" />
+    <Content Include="Templates\Emails\Item2EN.cshtml" />
+    <Content Include="Templates\Emails\Item2TC.cshtml" />
+    <Content Include="Templates\Emails\Item33EN.cshtml" />
+    <Content Include="Templates\Emails\Item33TC.cshtml" />
+    <Content Include="Templates\Emails\Item35EN.cshtml" />
+    <Content Include="Templates\Emails\Item35TC.cshtml" />
+    <Content Include="Templates\Emails\Item3EN.cshtml" />
+    <Content Include="Templates\Emails\Item3TC.cshtml" />
+    <Content Include="Templates\Emails\Item5EN.cshtml" />
+    <Content Include="Templates\Emails\Item7EN.cshtml" />
+    <Content Include="Templates\Emails\Item7TC.cshtml" />
+    <Content Include="Templates\Emails\Item8EN.cshtml" />
+    <Content Include="Templates\Emails\Item9EN.cshtml" />
+    <Content Include="Templates\Notifications\NotificationTitlesEN.json" />
+    <Content Include="Templates\Notifications\NotificationTitlesTC.json" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Templates\Emails\Item6EN.cshtml" />
+    <Content Include="Templates\Emails\Item6TC.cshtml" />
+    <Content Include="Templates\Emails\Item22EN.cshtml" />
+    <Content Include="Templates\Emails\Item22TC.cshtml" />
+    <Content Include="Templates\Emails\Item23EN.cshtml" />
+    <Content Include="Templates\Emails\Item23TC.cshtml" />
+    <Content Include="Templates\Emails\Item24EN.cshtml" />
+    <Content Include="Templates\Emails\Item24TC.cshtml" />
+    <Content Include="Templates\Emails\Item20EN.cshtml" />
+    <Content Include="Templates\Emails\Item20TC.cshtml" />
+    <Content Include="Templates\Attachments\Item20.docx" />
+    <Content Include="Templates\Emails\Item19EN.cshtml" />
+    <Content Include="Templates\Emails\Item19TC.cshtml" />
+    <Content Include="Templates\Attachments\Item22.docx" />
+    <Content Include="Templates\Attachments\Item23_Fail.docx" />
+    <Content Include="Templates\Attachments\Item23_Pass.docx" />
+    <Content Include="Templates\Attachments\Item23_ReExamFail.docx" />
+    <Content Include="Templates\Attachments\Item23_ReExamPass.docx" />
+    <Content Include="Templates\Attachments\Item24.docx" />
+    <Content Include="Templates\Emails\Item18EN.cshtml" />
+    <Content Include="Templates\Emails\Item18TC.cshtml" />
+    <Content Include="Templates\Emails\Item14EN.cshtml" />
+    <Content Include="Templates\Emails\Item14TC.cshtml" />
+    <Content Include="Templates\Emails\Item21TC.cshtml" />
+    <Content Include="Templates\Emails\Item21EN.cshtml" />
+    <Content Include="Templates\Emails\Item26EN.cshtml" />
+    <Content Include="Templates\Emails\Item27EN.cshtml" />
+    <Content Include="Templates\Emails\Item28EN.cshtml" />
+    <Content Include="Templates\Emails\Item29EN.cshtml" />
+    <Content Include="Templates\Emails\Item30EN.cshtml" />
+    <Content Include="Templates\Emails\Item31EN.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FIleUpload\" />
+    <Folder Include="Views\Enrollment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPDC.Common\SPDC.Common.csproj">
+      <Project>{82042c05-77eb-46a3-b473-35153dbebe3a}</Project>
+      <Name>SPDC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPDC.Data\SPDC.Data.csproj">
+      <Project>{1b0f62fd-b853-4bea-afec-edf16a5de33d}</Project>
+      <Name>SPDC.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPDC.Model\SPDC.Model.csproj">
+      <Project>{def0dde6-d99f-4dda-bdf4-02d46badf3e5}</Project>
+      <Name>SPDC.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPDC.Service\SPDC.Service.csproj">
+      <Project>{6b16c34e-4a9b-476a-a676-56876398522d}</Project>
+      <Name>SPDC.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50906</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44307/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,12 @@
+{
+  "account_name": "Account Name",
+  "password": "Password",
+  "button_login": "Login",
+  "login": "Please enter Login Email/CIC Number",
+  "password_enter": "Please enter Password",
+  "password_must": "Password must be at least 6 characters",
+  "sign_in": "Sign in",
+  "password_label": "Password",
+  "email_cic_label": "Email/CIC",
+  "login_label": "Login"
+}

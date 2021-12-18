@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Your Application for @Model.CourseName has been created</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hello @Model.DisplayName,<br /></p>
+        <p>
+            You Course Application has been created for @Model.CourseName . Please click <a href="@Model.ActivationLink">here</a> to login and update your application information before submission.<br /><br />
+        </p>
+        <p>
+            Thank you.<br />
+            School of Professional Development in Construction (SPDC)<br />
+            Hong Kong Institute of Construction (HKIC)<br />
+        </p>
+    </div>
+</body>
+</html>

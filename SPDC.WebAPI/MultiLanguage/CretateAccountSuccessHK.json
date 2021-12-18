@@ -1,0 +1,14 @@
+{
+  "success_title_label": "建立帳戶",
+  "account_success_title_label": "建立帳戶 - 成功",
+  "account_success_content_label": "您將收到一封確認電郵，請點擊確認電郵中的連結以啟動您的帳戶。",
+  "btn_label": "返回",
+  "email_exist_error_msg": "該電子郵件已經登記",
+  "hkid_passport_missing_error_msg": "您必須提供香港身份號碼證或護照號碼以及護照有效期",
+  "hkid_passport_exist_error_msg": "建造業議會編號，香港身份證號碼，手機號碼或護照號碼已登記",
+  "create_failure_msg": "建立帳戶失敗",
+  "create_success_msg": "建立帳戶 - 成功",
+  "send_mail_error_msg": "發送電子郵件失敗",
+  "new_and_confirm_password_different": "新密碼和確認新密碼不相同。",
+  "pass_and_confrim_password_different": "密碼和確認新密碼不相同。"
+}

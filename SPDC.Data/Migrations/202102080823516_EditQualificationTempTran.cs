@@ -1,0 +1,20 @@
+namespace SPDC.Data.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class EditQualificationTempTran : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.QualificationTemp", "ApplicationId", c => c.Int(nullable: false));
+            DropColumn("dbo.QualificationTempTran", "ApplicationId");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.QualificationTempTran", "ApplicationId", c => c.Int(nullable: false));
+            DropColumn("dbo.QualificationTemp", "ApplicationId");
+        }
+    }
+}

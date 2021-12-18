@@ -1,0 +1,14 @@
+{
+  "success_title_label": "建立帐户",
+  "account_success_title_label": "建立帐户 - 成功",
+  "account_success_content_label": "您将收到一封确认电邮，请点击确认电邮中的连结以启动您的帐户。",
+  "btn_label": "返回",
+  "email_exist_error_msg": "该电子邮件已经登记",
+  "hkid_passport_missing_error_msg": "您必须提供香港身份证号码或护照号码以及护照有效期",
+  "hkid_passport_exist_error_msg": "建造业议会编号，香港身份证号码，手机号码或护照号码已登记",
+  "create_failure_msg": "建立帐户失败",
+  "create_success_msg": "建立帐户 - 成功",
+  "send_mail_error_msg": "发送电子邮件失败",
+  "new_and_confirm_password_different": "新密码和确认新密码不相同。",
+  "pass_and_confrim_password_different": "密码和确认新密码不相同。"
+}

@@ -1,0 +1,63 @@
+{
+  "select_label": "请选择",
+  "enter_keyword_label": "输入关键词",
+  "course_search_label": "搜寻课程",
+  "course_code_label": "课程编号",
+  "course_name_label": "课程名称",
+  "course_category_label": {
+    "label": "课程种类",
+    "option_BIM": "建筑信息模拟(BIM)",
+    "option_MIC": "组装合成建筑法(MiC)",
+    "option_gorvernment": "政府部门认可课程",
+    "option_work_contact": "公共工程合约认可课程",
+    "option_auto_cad": "电脑辅助绘图",
+    "option_contract_admin": "合约管理",
+    "option_technology_quality": "建造技术及品质",
+    "option_management": "建造管理",
+    "option_protection": "环境保护",
+    "option_built_heritage": "文物保育"
+  },
+  "Table": {
+    "Course_category": "Course<br />Category_CN",
+    "Course_code": "Course <br />Code_CN",
+    "Course_name": "Course Name <br /> (EN)_CN",
+    "Course_name_tc": "Course <br /> Name (TC)_CN",
+    "Duration": "Duration <br /> (Total hrs)_CN",
+    "Course_fee": "Course Fee <br /> (HKD)_CN",
+    "Target_class_size": "Target <br /> Class Size_CN",
+    "With_exam": "With <br /> Exam_CN",
+    "With_modules": "With <br /> Modules_CN",
+    "Display_course_on_website": "Display Course <br /> Information on <br /> Website_CN",
+    "Approval_status": "Course Approval Status"
+  },
+  "course_mode_label": {
+    "label": "课程制式 （全日制/兼读制）",
+    "option_fulltime": "全日制",
+    "option_parttime": "兼读制"
+  },
+  "course_location_label": {
+    "label": "上课地点",
+    "option1": "九龙 九龙湾大业街 44 号香港建造学院九龙湾院校"
+  },
+  "keyword_search_label": "关键词搜寻",
+  "reset_label": "重设",
+  "search_label": "搜寻",
+  "search_result_label": "搜索结果",
+  "course_fee_label": "学费（港币）",
+  "duration_label": "授课期（总时数）",
+  "mode_of_study_label": "授课形式（全日制/兼读制）",
+  "prev_label": "上一页",
+  "next_label": "下一页",
+  "page_label": "页",
+  "view_details": "查看详情",
+  "course_code": "课程编号",
+  "course_name_english": "课程名称（英文）",
+  "course_name_chinese": "课程名称（中文）",
+  "display_website": "于网站显示班别资料",
+  "select_all": "选择全部",
+  "reset": "重设",
+  "search": "搜寻",
+  "course_found": "课程",
+  "create_new_course": "建立新内容",
+  "no_data": "没有资料"
+}

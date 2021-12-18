@@ -1,0 +1,10 @@
+{
+  "create_edit_title": "Create/Edit Admin Account",
+  "LDAP_account_input": "LDAP Account",
+  "email_address_input": "Emal Address",
+  "pulldown_course_code": "Responsible Course Code",
+  "pulldown_course_name": "Responsible Course Name",
+  "button_add": "Add",
+  "button_remove": "Remove",
+  "button_back": "Back"
+}

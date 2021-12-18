@@ -1,0 +1,18 @@
+{
+  "button_content": "内容管理",
+  "button_course": "课程管理",
+  "button_student_class": "学生及班别管理",
+  "button_e_survey": "电子问卷管理",
+  "button_account": "帐户管理",
+  "button_reporting": "报表",
+  "button_system_param": "系统参数",
+  "button_banner_background": "横幅和背景图片",
+  "button_new_event": "最新消息及活动",
+  "button_promitional": "推广项目",
+  "button_announcement": "通告",
+  "button_other_inner_page": "其他内页",
+  "manage_admin_account": "管理员帐户",
+  "manage_student_account": "学生帐户",
+  "inclement_weather_arrangement": "恶劣天气安排",
+  "wellcome_message": "欢迎词"
+}

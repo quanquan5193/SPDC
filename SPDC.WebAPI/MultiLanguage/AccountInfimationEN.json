@@ -1,0 +1,29 @@
+{
+  "account_information_label": "Account Information",
+  "username_label": "Username",
+  "email_address_label": "Email Address (as Login ID)",
+  "password_label": "Password",
+  "change_password_label": "Change Password",
+  "cic_no_label": "CIC No.",
+  "other_contact_email_label": "Other Contact Email",
+  "policy_accept_label": "I do not wish to receive any information from the CIC or HKIC in relation to its activities or developments in the construction industry.",
+  "interested_types_of_courses": "Interested Types of Courses",
+  "communication_language_label": {
+    "lable": "Communication Language",
+    "option_english": "English",
+    "option_chinese": "繁體中文"
+  },
+  "save_label": "Save",
+  "enter_original_password_account_message_label": "Please enter Original Password",
+  "invalid_original_password_account_message_label": "Invalid Original Password",
+  "enter_new_password_profile_account_message_label": "Please enter New Password",
+  "invalid_password_profile_account_message_label": "Password must be longer than 6 and shorter than 15 characters, and contain at least one lowercase letter, one uppercase letter, and one digit",
+  "enter_password_profile_account_message_label": "Please enter Confirm New Password",
+  "invalid_confirm_new_password_account_message_label": "Invalid Confirm New Password",
+  "invalid_other_contact_email_account_message_label": "Invalid Other Contact Email",
+  "original_label": "Original Password",
+  "new_password_label": "New Password",
+  "confirm_new_password_label": "Confirm new password",
+  "save_change_label": "Save Changes",
+  "invalid_original_password": "Invalid Original Password"
+}

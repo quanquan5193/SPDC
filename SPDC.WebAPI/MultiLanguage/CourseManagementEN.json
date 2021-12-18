@@ -1,0 +1,35 @@
+{
+  "course_search_title": "Course Search",
+  "course_category": {
+    "label": "Course Category",
+    "option_BIM": "Building Information Modelling (BIM)",
+    "option_MIC": "Modular Integrated Construction (MiC)",
+    "option_gorvernment": "Courses Recognised by Government Departments",
+    "option_work_contact": "Courses Recognised in Public Work Contracts",
+    "option_auto_cad": "CAD Drafting",
+    "option_contract_admin": "Contract Administration",
+    "option_technology_quality": "Construction Technology and Quality",
+    "option_management": "Construction Management",
+    "option_protection": "Environmental Protection",
+    "option_built_heritage": "Conservation of Built Heritage"
+  },
+  "course_name_en": "Course Name (English)",
+  "course_name_cn": "Course Name (Chinese)",
+  "course_code": "Course Code",
+  "display_course_info": {
+    "label": "Display Course Information on Website",
+    "option_yes": "Yes",
+    "option_no": "No"
+  },
+  "button_reset": "Reset",
+  "button_search": "Search",
+  "button_new": "Create New Course",
+  "duration": "Duration (Total hrs)",
+  "course_fee": "Course Fee (HKD)",
+  "class_capacity": "Class Capacity",
+  "with_exam": "With Exam",
+  "with_module": "With Module",
+  "button_prev": "Prev",
+  "button_next": "Next",
+  "page": "Page"
+}

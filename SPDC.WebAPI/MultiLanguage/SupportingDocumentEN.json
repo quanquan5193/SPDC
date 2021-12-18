@@ -1,0 +1,18 @@
+{
+  "supporting_document_title": "Supporting Documents ",
+  "drag_drop_file": "Drag & Drop file here or",
+  "button_browser": "Browser File",
+  "filename_label": "File Name",
+  "modified_code_label": "Modified Date",
+  "button_back": "Back",
+  "button_save": "Save",
+  "btn_back": "Back",
+  "btn_save": "Save",
+  "btn_next": "Next",
+  "btn_cancel": "Cancel",
+  "btn_yes": "Yes",
+  "confirm_label": "Confirm",
+  "are_you_sure": "Are you sure you want to leave this page?",
+  "please_make_sure": " Please make sure you have saved before,<br> otherwise you will lose any unsaved data.",
+  "uploaded_at": "Uploaded at"
+}

@@ -1,0 +1,15 @@
+{
+  "email_cic_label": "帳號電郵 / 建造業議會編號",
+  "password_label": "密碼",
+  "remember_label": "記住我的帳戶",
+  "enter_captcha_label": "請輸入驗證碼:",
+  "login_label": "登入 ",
+  "create_account_label": "建立帳戶",
+  "forgot_password_label": "忘記密碼？",
+  "resend_activation_email_label": "重新發送確認電郵",
+  "login_message_label": "請輸入帳號電郵 / 建造業議會編號",
+  "password_message_label": "請輸入密碼",
+  "invalid_login_message_label": "無效的帳號電郵 / 建造業議會編號或密碼",
+  "recaptcha_message_label": "請勾選我不是機器人",
+  "account_not_comfirmed_message_label": "帳戶尚未認証"
+}

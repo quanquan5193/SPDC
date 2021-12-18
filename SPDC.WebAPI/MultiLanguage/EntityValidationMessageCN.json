@@ -1,0 +1,6 @@
+{
+  "new_and_confirm_password_different": "新密码和确认新密码不相同",
+  "pass_and_confirm_password_different": "密码和确认新密码不相同。",
+  "pass_wrong_format": "密码必须使用6-15个字符，且至少包含一个小写字母，一个大写字母和一位数字",
+  "entity_validation_message": "Validation failed for one or more entities _CN"
+}

@@ -1,0 +1,84 @@
+{
+  "Banner_Backgroubnd_Images": {
+    "option1": "Background Image - EN/TC/SC",
+    "option2": "Side Navigation Image - EN/TC/SC",
+    "option3": "Landing Page - Banner - EN",
+    "option4": "Landing Page - Banner - TC",
+    "option5": "Landing Page - Banner - SC",
+    "bulk_actions": "Bulk Actions",
+    "create_new_content": "Create New Content",
+    "no_data": "No Data"
+  },
+  "Table": {
+    "Content_type": "Content Type",
+    "Title": "Title",
+    "Last_publish_date": "Last Publish Date",
+    "Publish_status": "Publish Status",
+    "Approval_status": "Approval Status"
+  },
+  "Announcement": {
+    "option1": "Annoucement - EN",
+    "option2": "Annoucement - TC",
+    "option3": "Annoucement - SC",
+    "bulk_actions": "Bulk Actions",
+    "create_new_announcement": "Create New Announcement",
+    "no_data": "No Data"
+  },
+  "New_And_Event": {
+    "option1": "News - EN",
+    "option2": "News - TC",
+    "option3": "News - SC",
+    "option4": "Events - EN",
+    "option5": "Events - TC",
+    "option6": "Events - SC",
+    "create_new_content": "Create New Content"
+  },
+  "Promotional_Items": {
+    "option1": "CMS 4 - EN",
+    "option2": "CMS 4 - TC",
+    "option3": "CMS 4 - SC",
+    "option4": "CMS 5 - EN",
+    "option5": "CMS 5 - TC",
+    "option6": "CMS 5 - SC",
+    "option7": "CMS 6 - EN",
+    "option8": "CMS 6 - TC",
+    "option9": "CMS 6 - SC"
+  },
+  "Other_Inner_Pages": {
+    "option1": "Diclaimer - EN",
+    "option2": "Diclaimer - TC",
+    "option3": "Diclaimer - SC",
+    "option4": "Privacy Policy - EN",
+    "option5": "Privacy Policy - TC",
+    "option6": "Privacy Policy - SC",
+    "option7": "FAQ - EN",
+    "option8": "FAQ - TC",
+    "option9": "FAQ - SC",
+    "option10": "Campus Information - EN",
+    "option11": "Campus Information - TC",
+    "option12": "Campus Information - SC",
+    "option13": "Useful Links - EN",
+    "option14": "Useful Links - TC",
+    "option15": "Useful Links - SC",
+    "option16": "About Us - EN",
+    "option17": "About Us - TC",
+    "option18": "About Us - SC",
+    "option19": "Contact Us - EN",
+    "option20": "Contact Us - TC",
+    "option21": "Contact Us - SC"
+  },
+  "Inclement_Weather_Arrangement": {
+    "create_new_weather": "Create Content"
+  },
+  "bulk_actions": {
+    "option1": "Publish",
+    "option2": "Unpublish",
+    "bulk_actions_label": "Bulk Actions"
+  },
+  "actions": {
+    "option1": "Approve",
+    "option2": "Unapprove",
+    "option3": "Publish",
+    "option4": "Unpublish"
+  }
+}

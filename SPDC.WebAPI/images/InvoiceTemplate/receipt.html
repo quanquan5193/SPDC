@@ -1,0 +1,173 @@
+<div style="max-width: 1000px; margin: 0 auto;">
+  <div style="display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;">
+    <img src="./logo_spdc.png" alt="spdc-logo" style="height: 100px; background-color: grey;" />
+    <h1>SPDC</h1>
+  </div>
+  <div style="display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;">
+    <div style="flex: 3;
+      text-align: center;
+      font-size: 36px;">
+      收 RECEIPT 據
+    </div>
+    <div style="flex: 1;">
+      <div style="margin-bottom: 15px;
+       display: flex;
+      width: 100%;
+      justify-content: space-between;">
+        <div>
+          <div> 收據號碼</div>
+          <div> Receipt No:</div>
+        </div>
+        <div>
+          @ReceiptNo
+        </div>
+      </div>
+      <div style="margin-bottom: 15px;
+       display: flex;
+      width: 100%;
+      justify-content: space-between;">
+        <div>
+          <div> 印發日期</div>
+          <div> Print date: </div>
+        </div>
+        <div>
+          @PrintDate
+        </div>
+      </div>
+      <div style="margin-bottom: 15px;
+       display: flex;
+      width: 100%;
+      justify-content: space-between;">
+        <div>
+          <div> 經手人</div>
+          <div> Issued by: </div>
+        </div>
+        <div>
+          @LDAPaccount
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <table style=" border: 1px solid black;
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse;">
+      <thead>
+        <th colspan="6" style=" border: 1px solid black; padding: 0.5%;">@ReceivedFrom</th>
+      </thead>
+      <thead>
+        <th colspan="6" style=" border: 1px solid black; padding: 0.5%;">款項 Amount：HK$ @TotalAmount</th>
+      </thead>
+      <thead>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>課程編號 </div>
+          <div>Course Code </div>
+        </th>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>付款項目 </div>
+          <div>Type of payment</div>
+        </th>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>項目 </div>
+          <div>Item</div>
+        </th>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>數量 </div>
+          <div>Quantity</div>
+        </th>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>金額 </div>
+          <div>Amount (HK$)</div>
+        </th>
+        <th style=" border: 1px solid black; padding: 0.5%;">
+          <div>備註 </div>
+          <div>Remark</div>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td style=" border: 1px solid black; padding: 0.5%;">@CourseCode</td>
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@TypeOfPaymentCN1</div>
+            <div>@TypeOfPaymentEN1</div>
+          </td style=" border: 1px solid black; padding: 0.5%;">
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@ItemNameCN1</div>
+            <div>@ItemNameEN1</div>
+          </td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@Quantity1</td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@Amount1</td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@Remark</td>
+        </tr>
+        <tr>
+          <td style=" border: 1px solid black; padding: 0.5%;"></td>
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@TypeOfPaymentCN2</div>
+            <div>@TypeOfPaymentEN2</div>
+          </td>
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@ItemNameCN2</div>
+            <div>@ItemNameEN2</div>
+          </td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@Quantity2</td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@Amount2</td>
+          <td style=" border: 1px solid black; padding: 0.5%;"></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th style=" border: 1px solid black; padding: 0.5%;">
+            <div>付款方式</div>
+            <div>Payment Method:</div>
+          </th>
+          <th style=" border: 1px solid black; padding: 0.5%;"></th>
+          <th style=" border: 1px solid black; padding: 0.5%;"></th>
+          <th style=" border: 1px solid black; padding: 0.5%;"></th>
+          <th style=" border: 1px solid black; padding: 0.5%;">
+            <div>付款日期</div>
+            <div>Payment Date:</div>
+          </th>
+          <th style=" border: 1px solid black; padding: 0.5%;"></th>
+        </tr>
+        <tr>
+          <td style=" border: 1px solid black; padding: 0.5%;"></td>
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@PaymentMethodCN2</div>
+            <div>@PaymentMethodEN2</div>
+          </td>
+          <td style=" border: 1px solid black; padding: 0.5%;">
+            <div>@BankCodeBankNameCN</div>
+            <div>@BankCodeBankNameEN</div>
+          </td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@PaymentTime</td>
+          <td style=" border: 1px solid black; padding: 0.5%;">@PaymentDate</td>
+          <td style=" border: 1px solid black; padding: 0.5%;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items:center; margin-top: 20px">
+    <div>
+        <div style="margin-bottom: 15px">
+            <div>@Note1</div>
+            <div>@NoteSec</div>
+            <div>@NoteThir</div>
+        </div>
+      <p>
+        備註：如用支票付款則此收據只屬臨時性質，須待存入銀行收妥後始能作實
+        NOTES: FOR PAYMENT BY CHEQUE, THIS RECEIPT IS PROVISIONAL ONLY. IT IS VALID AFTER THE CHEQUE IS VALUED
+      </p>
+    </div>
+    <img src="./invoice_chop_spdc.png" alt="spdc-chop" style="height: 100px; " />
+
+  </div>
+</div>

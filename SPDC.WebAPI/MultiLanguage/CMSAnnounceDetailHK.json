@@ -1,0 +1,22 @@
+{
+  "created_by": "建立者：",
+  "created_on": "創建於：",
+  "last_updated_on": "上次更新時間：",
+  "show_on_landing": "顯示於網站主頁？",
+  "display_on": "顯示於",
+  "preview_detail": "預覽內容",
+  "approve": "批核",
+  "unapprove": "批核",
+  "publish": "發布",
+  "unpublish": "取消發布",
+  "no": "否",
+  "yes": "是",
+  "actions": "操作",
+  "website": "網站",
+  "mobile": "手機應用程式",
+  "both": "兩者",
+  "release_date": "發布日期",
+  "invalid_release_date": "無效的發布日期",
+  "end_date": "完結日期",
+  "invalid_end_date": "無效的完結日期"
+}

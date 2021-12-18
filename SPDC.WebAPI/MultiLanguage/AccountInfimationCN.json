@@ -1,0 +1,29 @@
+{
+  "account_information_label": "帐号信息",
+  "username_label": "用户名称",
+  "email_address_label": "电邮地址（用作登入帐户)",
+  "password_label": "密码",
+  "change_password_label": "重设密码",
+  "cic_no_label": "建造业议会编号",
+  "other_contact_email_label": "其他电邮地址",
+  "policy_accept_label": "本人不同意日后接受由建造业议会或香港建造学院发出有关议会或学院活动和与建造业相关的信息。",
+  "interested_types_of_courses": "感兴趣的课程种类",
+  "communication_language_label": {
+    "lable": "通讯语言",
+    "option_english": "English",
+    "option_chinese": "繁体中文"
+  },
+  "save_label": "储存",
+  "enter_original_password_account_message_label": "请输入目前密码",
+  "invalid_original_password_account_message_label": "無效的目前密碼",
+  "enter_new_password_profile_account_message_label": "无效的目前密码",
+  "invalid_password_profile_account_message_label": "密码必须使用6-15个字符，且至少包含一个小写字母、一个大写字母和一位数字",
+  "enter_password_profile_account_message_label": "请输入确认新密码",
+  "invalid_confirm_new_password_account_message_label": "无效的新密码",
+  "invalid_other_contact_email_account_message_label": "无效的其他电邮地址",
+  "original_label": "目前密码",
+  "new_password_label": "新密码",
+  "confirm_new_password_label": "确认新密码",
+  "save_change_label": "储存变更",
+  "invalid_original_password": "无效的密码"
+}

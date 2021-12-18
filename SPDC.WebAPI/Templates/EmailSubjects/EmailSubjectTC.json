@@ -1,0 +1,23 @@
+﻿{
+  "item1": "歡迎來到註冊建造專業進修院校電子平台",
+  "item2": "重設閣下的密碼",
+  "item3": "重設閣下的密碼",
+  "item5": "not implement",
+  "item6": "閣下的申請已被退回",
+  "item7": "閣下的申請不被接納",
+  "item8": "not implement",
+  "item9": "not implement",
+  "item10": "not implement",
+  "item20": "不合資格參加考試通知書 @Model.ClassCode",
+  "item33": "not implement",
+  "item35": "你的申請 @Model.CourseName 已建立",
+  "item18": "開課提示 ({0})",
+  "item14": "付款提示 ({0})",
+  "item21": "課程講義 ({0})",
+  "item26": "Request for Approval – Reminder ({0})",
+  "item27": "Cancellation of Approval Request ({0})",
+  "item28": "Request for Approval – Reminder ({0})",
+  "item29": "Request for Approval – Reminder ({0})",
+  "item30": "Request Approved ({0})",
+  "item31": "Request Rejected ({0})"
+}

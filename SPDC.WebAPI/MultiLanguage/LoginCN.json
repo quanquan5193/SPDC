@@ -1,0 +1,15 @@
+{
+  "email_cic_label": "帐号电邮 / 建造业议会编号",
+  "password_label": "密码",
+  "remember_label": "记住我的帐户",
+  "enter_captcha_label": "请输入验证码:",
+  "login_label": "登入 ",
+  "create_account_label": "建立账户",
+  "forgot_password_label": "忘记密码？",
+  "resend_activation_email_label": "重新发送确认电邮",
+  "login_message_label": "帐号电邮 / 建造业议会编号",
+  "password_message_label": "请输入密码",
+  "invalid_login_message_label": "无效的帐号电子邮件/建造业议会编号或密码",
+  "recaptcha_message_label": "请勾选我不是机器人",
+  "account_not_comfirmed_message_label": "帐户尚未认证"
+}

@@ -1,0 +1,15 @@
+{
+  "email_cic_label": "Login Email/CIC Number",
+  "password_label": "Password",
+  "remember_label": "Remember me",
+  "enter_captcha_label": "Enter Captcha Here:",
+  "login_label": "Login ",
+  "create_account_label": "Create Account",
+  "forgot_password_label": "Forgot Password?",
+  "resend_activation_email_label": "Resend Activation Email",
+  "login_message_label": "Please enter Login Email/CIC Number ",
+  "password_message_label": "Please enter Password",
+  "invalid_login_message_label": "Invalid Login Email/CIC Number or Password",
+  "recaptcha_message_label": "Please click 'I'm not a robot'",
+  "account_not_comfirmed_message_label": "Account has not activated yet"
+}

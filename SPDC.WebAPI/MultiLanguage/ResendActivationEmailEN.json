@@ -1,0 +1,8 @@
+{
+  "resend_activation_email_label": "Resend Activation Email",
+  "login_email_address_label": "Login Email Address",
+  "resend_activation_email_button": "Resend Activation Email",
+  "back_label": "Back",
+  "invalid_email_address_resend_message_label": "Invalid Email Address",
+  "enter_email_address_resend_message_label": "Please enter Email Address"
+}

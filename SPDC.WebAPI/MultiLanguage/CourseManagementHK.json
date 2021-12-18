@@ -1,0 +1,35 @@
+{
+  "course_search_title": "搜尋課程",
+  "course_category": {
+    "label": "課程類別",
+    "option_BIM": "建築信息模擬(BIM)",
+    "option_MIC": "組裝合成建築法(MiC)",
+    "option_gorvernment": "政府部門認可課程",
+    "option_work_contact": "公共工程合約認可課程",
+    "option_auto_cad": "電腦輔助繪圖",
+    "option_contract_admin": "合約管理",
+    "option_technology_quality": "建造技術及品質",
+    "option_management": "建造管理",
+    "option_protection": "環境保護",
+    "option_built_heritage": "文物保育"
+  },
+  "course_name_en": "課程名稱（英文）",
+  "course_name_cn": "課程名稱（中文）",
+  "course_code": "課程編號",
+  "display_course_info": {
+    "label": "於網站顯示課程資料",
+    "option_yes": "是",
+    "option_no": "否"
+  },
+  "button_reset": "重設",
+  "button_search": "搜尋",
+  "button_new": "建立新課程",
+  "duration": "授課期（總時數）",
+  "course_fee": "學費 (港幣)",
+  "class_capacity": "每班學額",
+  "with_exam": "包含考試",
+  "with_module": "包含單元",
+  "button_prev": "上一頁",
+  "button_next": "下一頁",
+  "page": "頁"
+}

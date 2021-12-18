@@ -1,0 +1,64 @@
+{
+  "select_label": "Select",
+  "enter_keyword_label": "Enter Keyword ",
+  "course_search_label": "Course Search",
+  "course_code_label": "Course Code",
+  "course_name_label": "Course Name",
+  "course_category_label": {
+    "label": "Types of Courses",
+    "option_BIM": "Building Information Modelling (BIM)",
+    "option_MIC": "Modular Integrated Construction (MiC)",
+    "option_gorvernment": "Courses Recognised by Government Departments",
+    "option_work_contact": "Courses Recognised in Public Work Contracts",
+    "option_auto_cad": "CAD Drafting",
+    "option_contract_admin": "Contract Administration",
+    "option_technology_quality": "Construction Technology and Quality",
+    "option_management": "Construction Management",
+    "option_protection": "Environmental Protection",
+    "option_built_heritage": "Conservation of Built Heritage"
+  },
+  "course_mode_label": {
+    "label": "Study Mode (Part-time / Full-time)",
+    "option_fulltime": "Full-time",
+    "option_parttime": "Part-time"
+  },
+  "course_location_label": {
+    "label": "Venue",
+    "option1": "HKIC Kowloon Bay Campus, 44 Tai Yip Street, Kowloon Bay, Kowloon"
+  },
+  "Table": {
+    "Course_category": "Types of<br />Courses",
+    "Course_code": "Course <br />Code",
+    "Course_name": "Course Name <br /> (EN)",
+    "Course_name_tc": "Course <br /> Name (TC)",
+    "Duration": "Duration <br /> (Total hrs)",
+    "Course_fee": "Course Fee <br /> (HKD)",
+    "Target_class_size": "Target <br /> Class Size",
+    "With_exam": "With <br /> Exam",
+    "With_modules": "With <br /> Modules",
+    "Display_course_on_website": "Display Course <br /> Information on <br /> Website",
+    "Approval_status": "Course Approval Status"
+  },
+  "keyword_search_label": "Keyword Search ",
+  "reset_label": "Reset",
+  "search_label": "Search",
+  "search_result_label": "Search Result",
+  "course_fee_label": "Course Fee (HKD)",
+  "duration_label": "Duration (Total hrs)",
+  "mode_of_study_label": "Study Mode (Part-time / Full-time)",
+  "prev_label": "Prev",
+  "next_label": "Next",
+  "page_label": "Page",
+  "view_details": "View Details",
+  "course_code": "Course Code",
+  "course_name_english": "Course Name (English)",
+  "course_name_chinese": "Course Name (Chinese)",
+  "display_website": "Display Course Information on Website",
+  "select_all": "Select All",
+  "reset": "Reset",
+  "search": "Search",
+  "course_found": "course(s) found.",
+  "create_new_course": "Create New Course",
+  "no_data": "No data"
+
+}

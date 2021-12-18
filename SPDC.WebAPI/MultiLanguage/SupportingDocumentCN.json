@@ -1,0 +1,19 @@
+{
+  "supporting_document_title": "证明文件",
+  "drag_drop_file": "在此处拖放文件或",
+  "button_browser": "浏览文件",
+  "filename_label": "文件名称",
+  "modified_code_label": "修改日期",
+  "button_back": "返回",
+  "button_save": "储存",
+  "btn_back": "返回",
+  "btn_save": "储存",
+  "btn_next": "下一页",
+  "btn_cancel": "取消",
+  "btn_yes": "是",
+  "confirm_label": "确认",
+  "are_you_sure": "您确定要离开这个页面吗？",
+  "please_make_sure": " 请确保您之前已保存，<br> 否则您将丢失所有未保存的数据。",
+  "uploaded_at": "上载于"
+ 
+}

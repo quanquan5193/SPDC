@@ -1,0 +1,13 @@
+{
+  "account_name": "帳戶名稱",
+  "password": "密碼",
+  "button_login": "登入",
+  "invalid_end_date": "無效的完成日期",
+  "last_updated": "上次更新時間：",
+  "inclement_weather_arrangement": "惡劣天氣安排",
+  "please_enter_description": "請輸入內容",
+  "url_link": "SEO URL鏈接",
+  "password_label": "密碼",
+  "email_cic_label": "電郵地址",
+  "login_label": "登入"
+}

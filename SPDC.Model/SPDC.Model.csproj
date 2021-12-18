@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEF0DDE6-D99F-4DDA-BDF4-02D46BADF3E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPDC.Model</RootNamespace>
+    <AssemblyName>SPDC.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.7.10.0\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.7.10.0\lib\net461\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\Auditable.cs" />
+    <Compile Include="BindingModels\AdditionalClassApproval\AdditionalClassBindingModel.cs" />
+    <Compile Include="BindingModels\AdditionalClassApproval\AdditionalClassSearchModel.cs" />
+    <Compile Include="BindingModels\ApplicationBindingModel.cs" />
+    <Compile Include="BindingModels\ApplicationManagement\ApprovedRejectedApplicationBindingModel.cs" />
+    <Compile Include="BindingModels\ApplicationManagement\AssignedClassBindingModel.cs" />
+    <Compile Include="BindingModels\Approval\CancelApprovalSubClassBindingModel.cs" />
+    <Compile Include="BindingModels\Approval\CancelPostponedSubClassBindingModel.cs" />
+    <Compile Include="BindingModels\Approval\CancelSubmitClassBindingModel.cs" />
+    <Compile Include="BindingModels\Approval\CancelSubmitCourseBindingModel.cs" />
+    <Compile Include="BindingModels\Assessment\AssessmentFilter.cs" />
+    <Compile Include="BindingModels\Assessment\AssessmentRecordBindingModel.cs" />
+    <Compile Include="BindingModels\Assessment\AssignReExamTimeslotBindingModel.cs" />
+    <Compile Include="BindingModels\Assessment\AssignToReExamTimeslotBindingModel.cs" />
+    <Compile Include="BindingModels\Assessment\CourseAssessmentFilter.cs" />
+    <Compile Include="BindingModels\Assessment\ResitExamClassBindingModel.cs" />
+    <Compile Include="BindingModels\Assessment\ResitExamClassSearchModel.cs" />
+    <Compile Include="BindingModels\BatchApplication\BatchApplicationBindingModel.cs" />
+    <Compile Include="BindingModels\BatchPayment\BatchPaymentDetailBindingModel.cs" />
+    <Compile Include="BindingModels\EmailConfirmation\EmailConfirmationBindingModel.cs" />
+    <Compile Include="BindingModels\EmailConfirmation\ResendActivationEmailBindingModel.cs" />
+    <Compile Include="BindingModels\Enrollment\GetCalendarBindingModel.cs" />
+    <Compile Include="BindingModels\Enrollment\GetClassDetailBingdingModel.cs" />
+    <Compile Include="BindingModels\Enrollment\GetExamListBindingModel.cs" />
+    <Compile Include="BindingModels\Enrollment\GetMyCourseBingdingModel.cs" />
+    <Compile Include="BindingModels\Invoice\WaivedPaymentApprovedHistoryBindingModel.cs" />
+    <Compile Include="BindingModels\ClassBindingModel.cs" />
+    <Compile Include="BindingModels\ContentBindingModel.cs" />
+    <Compile Include="BindingModels\CourseBindingModel.cs" />
+    <Compile Include="BindingModels\CourseCategoryBindingModel.cs" />
+    <Compile Include="BindingModels\CreateAdminBindingModel.cs" />
+    <Compile Include="BindingModels\DocumentBindingModel.cs" />
+    <Compile Include="BindingModels\ExamBindingModel.cs" />
+    <Compile Include="BindingModels\FullTextSearchBindingModel.cs" />
+    <Compile Include="BindingModels\Invoice\InvoiceCreateBindingModel.cs" />
+    <Compile Include="BindingModels\KeyValueModel.cs" />
+    <Compile Include="BindingModels\LessionBindingModel.cs" />
+    <Compile Include="BindingModels\MakeupClass\AssignToMakeupClassBindingModel.cs" />
+    <Compile Include="BindingModels\MakeupClass\AssignToMakeupLessonBindingModel.cs" />
+    <Compile Include="BindingModels\MakeupClass\AttendanceSearchBindingModel.cs" />
+    <Compile Include="BindingModels\MakeupClass\MakeupClassBindingModel.cs" />
+    <Compile Include="BindingModels\MakeupClass\MakeupClassSearchModel.cs" />
+    <Compile Include="BindingModels\MyApplication\MyCourseApplicationFilter.cs" />
+    <Compile Include="BindingModels\Permission\AdminCriteriaBindingModel.cs" />
+    <Compile Include="BindingModels\QualificationBindingModels.cs" />
+    <Compile Include="BindingModels\StudentAndClassManagement\StudentClassManageFilterBindingModel.cs" />
+    <Compile Include="BindingModels\StudentAndClassManagement\SummaryTableFilter.cs" />
+    <Compile Include="BindingModels\Transaction\RefundTransaction\ApprvovedRefundTransactionBindingModel.cs" />
+    <Compile Include="BindingModels\Transaction\RefundTransaction\RefundTransactionFilter.cs" />
+    <Compile Include="BindingModels\Transaction\TransactionBindingModel.cs" />
+    <Compile Include="BindingModels\UserSubscriptionBindingModel.cs" />
+    <Compile Include="Models\AcceptedBank.cs" />
+    <Compile Include="Models\AdditionalClassesApproval.cs" />
+    <Compile Include="Models\AdminPermission.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\ApplicationAssessmentDocument.cs" />
+    <Compile Include="Models\ApplicationHistoryDocument.cs" />
+    <Compile Include="Models\ApplicationApprovedStatusHistory.cs" />
+    <Compile Include="Models\ApplicationSetups.cs" />
+    <Compile Include="Models\ApplicationStatusStorage.cs" />
+    <Compile Include="Models\ApplicationTran.cs" />
+    <Compile Include="Models\BatchPayment.cs" />
+    <Compile Include="Models\CIC\Address.cs" />
+    <Compile Include="Models\CIC\AdmissionRequirementModel.cs" />
+    <Compile Include="Models\CIC\CreateApplicationRequestModel.cs" />
+    <Compile Include="Models\CIC\CreateApplicationResponseModel.cs" />
+    <Compile Include="Models\CIC\CreateCourseRequestModel.cs" />
+    <Compile Include="Models\CIC\CreateCourseResponseModel.cs" />
+    <Compile Include="Models\CIC\CreatePaymentRequestModel.cs" />
+    <Compile Include="Models\CIC\CreatePaymentResponseModel.cs" />
+    <Compile Include="Models\CIC\Education.cs" />
+    <Compile Include="Models\CIC\GetCentreResponseModel.cs" />
+    <Compile Include="Models\CIC\GetCourseStatusResponseModel.cs" />
+    <Compile Include="Models\CIC\GetInstructorResponseModel.cs" />
+    <Compile Include="Models\CIC\GetOfficerResponseModel.cs" />
+    <Compile Include="Models\CIC\GetVenueResponseModel.cs" />
+    <Compile Include="Models\CIC\Officer.cs" />
+    <Compile Include="Models\CIC\PaymentItem.cs" />
+    <Compile Include="Models\CIC\PaymentMethod.cs" />
+    <Compile Include="Models\CIC\PersonalInfo.cs" />
+    <Compile Include="Models\CIC\Qualification.cs" />
+    <Compile Include="Models\CIC\SubjectOfficerModel.cs" />
+    <Compile Include="Models\CIC\TextValueModel.cs" />
+    <Compile Include="Models\CIC\TrainingCampusModel.cs" />
+    <Compile Include="Models\CIC\UpdateCourseRequestModel.cs" />
+    <Compile Include="Models\CIC\UpdateCourseResponseModel.cs" />
+    <Compile Include="Models\CIC\UpdateCourseStatusRequestModel.cs" />
+    <Compile Include="Models\CIC\UpdateCourseStatusResponseModel.cs" />
+    <Compile Include="Models\CIC\UploadAppAttachmentRequestModel.cs" />
+    <Compile Include="Models\CIC\UploadAppAttachmentResponseModel.cs" />
+    <Compile Include="Models\CIC\WorkExperience.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\ClassAppovedStatusHistory.cs" />
+    <Compile Include="Models\ClassCommon.cs" />
+    <Compile Include="Models\ClassHistoryDocument.cs" />
+    <Compile Include="Models\ClientApplication.cs" />
+    <Compile Include="Models\CmsContent.cs" />
+    <Compile Include="Models\CmsContentType.cs" />
+    <Compile Include="Models\CmsImage.cs" />
+    <Compile Include="Models\CommonData.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\CourseAppovedStatusHistory.cs" />
+    <Compile Include="Models\CourseCategorieTran.cs" />
+    <Compile Include="Models\CourseCategory.cs" />
+    <Compile Include="Models\CourseDocument.cs" />
+    <Compile Include="Models\CourseHistoryDocument.cs" />
+    <Compile Include="Models\CourseLocation.cs" />
+    <Compile Include="Models\CourseLocationTran.cs" />
+    <Compile Include="Models\CourseTran.cs" />
+    <Compile Include="Models\CourseType.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DownloadDocumentTracking.cs" />
+    <Compile Include="Models\EmployerRecommendationTemp.cs" />
+    <Compile Include="Models\EmployerRecommendations.cs" />
+    <Compile Include="Models\EmployerRecommendationTempTran.cs" />
+    <Compile Include="Models\EmployerRecommendationTran.cs" />
+    <Compile Include="Models\Enquiry.cs" />
+    <Compile Include="Models\EnrollmentStatus.cs" />
+    <Compile Include="Models\EnrollmentStatusStorage.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\ExamApplication.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\InvoiceItem.cs" />
+    <Compile Include="Models\InvoiceItemTran.cs" />
+    <Compile Include="Models\InvoiceItemType.cs" />
+    <Compile Include="Models\InvoiceStatus.cs" />
+    <Compile Include="Models\InvoiceStatusStorage.cs" />
+    <Compile Include="Models\Keyword.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\LessonAttendance.cs" />
+    <Compile Include="Models\LevelofApproval.cs" />
+    <Compile Include="Models\MakeUpAttendence.cs" />
+    <Compile Include="Models\MakeUpClass.cs" />
+    <Compile Include="Models\MediumOfInstruction.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\ModuleCombination.cs" />
+    <Compile Include="Models\ModuleTrans.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationUser.cs" />
+    <Compile Include="Models\ParticularTemp.cs" />
+    <Compile Include="Models\Particular.cs" />
+    <Compile Include="Models\ParticularTempTran.cs" />
+    <Compile Include="Models\ParticularTran.cs" />
+    <Compile Include="Models\PaymentTransaction.cs" />
+    <Compile Include="Models\PaymentTransactionDocument.cs" />
+    <Compile Include="Models\ProgrammeLeader.cs" />
+    <Compile Include="Models\QualificationTemp.cs" />
+    <Compile Include="Models\Qualification.cs" />
+    <Compile Include="Models\QualificationTempTran.cs" />
+    <Compile Include="Models\QualificationsTran.cs" />
+    <Compile Include="Models\ReExamApplication.cs" />
+    <Compile Include="Models\RefundTransaction.cs" />
+    <Compile Include="Models\RefundTransactionApprovedStatusHistory.cs" />
+    <Compile Include="Models\RefundTransactionDocument.cs" />
+    <Compile Include="Models\RefundTransactionHistoryDocument.cs" />
+    <Compile Include="Models\RelevantMemberships.cs" />
+    <Compile Include="Models\RelevantWorks.cs" />
+    <Compile Include="Models\ResitExam.cs" />
+    <Compile Include="Models\StudentRemark.cs" />
+    <Compile Include="Models\SubClassApprovedStatusHistory.cs" />
+    <Compile Include="Models\SubClassDraft.cs" />
+    <Compile Include="Models\SubClassHistoryDocument.cs" />
+    <Compile Include="Models\SystemPrivilege.cs" />
+    <Compile Include="Models\TargetClasses.cs" />
+    <Compile Include="Models\TransactionType.cs" />
+    <Compile Include="Models\UserDevice.cs" />
+    <Compile Include="Models\UserDocumentTemp.cs" />
+    <Compile Include="Models\UserDocument.cs" />
+    <Compile Include="Models\UserSubscription.cs" />
+    <Compile Include="Models\VersionManagement.cs" />
+    <Compile Include="Models\WaivedHistoryDocument.cs" />
+    <Compile Include="Models\WaiverApprovedStatusHistory.cs" />
+    <Compile Include="Models\WorkExperienceTemp.cs" />
+    <Compile Include="Models\WorkExperience.cs" />
+    <Compile Include="Models\WorkExperienceTempTran.cs" />
+    <Compile Include="Models\WorkExperienceTran.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AccountBindingModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\AdditionalClassApproval\AdditionalClassesApprovalViewModel.cs" />
+    <Compile Include="ViewModels\AdminPermissionViewModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\AccountSystemPrivilegesBindingModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\AccountSystemPrivilegesViewModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\AdminAccountBindingModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\ContentPrivilegesBindingModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\ContentPrivilegesViewModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\CoursePrivilegesBindingModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\CoursePrivilegesViewModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\PrivilegesBindingModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\PrivilegesViewModel.cs" />
+    <Compile Include="ViewModels\AdminPrivileges\SuspendActiveBindingModel.cs" />
+    <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationManagement\ApplicationApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationManagement\ApplicationHistoryFilter.cs" />
+    <Compile Include="ViewModels\ApplicationManagement\SummaryTableViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationSetupModel.cs" />
+    <Compile Include="ViewModels\ApplicationSetupViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationViewModel.cs" />
+    <Compile Include="ViewModels\Application\CourseCodeFilter.cs" />
+    <Compile Include="ViewModels\Application\CourseCodeViewModel.cs" />
+    <Compile Include="ViewModels\Application\InvoiceBindingModel.cs" />
+    <Compile Include="ViewModels\Application\MyCourseApplicationViewModel.cs" />
+    <Compile Include="ViewModels\Approval\ClassApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\Approval\ClassHistoryFilter.cs" />
+    <Compile Include="ViewModels\Approval\CourseApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\Approval\CourseHistoryFilter.cs" />
+    <Compile Include="ViewModels\Approval\SubClassApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\Approval\SubClassHistoryFilter.cs" />
+    <Compile Include="ViewModels\Assessment\AssessmentRecordViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\AssignReExamViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\ClassAssessmentViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\CourseAssessmentViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\ReExamFromViewModel.cs" />
+    <Compile Include="ViewModels\Assessment\ResitExamViewModel.cs" />
+    <Compile Include="ViewModels\AutoEmail\ClassCommencementDateReminderViewModel.cs" />
+    <Compile Include="ViewModels\AutoEmail\NewlyUploadCourseMaterialNotifyViewModel.cs" />
+    <Compile Include="ViewModels\AutoEmail\PaymentDueDateReminderViewModel.cs" />
+    <Compile Include="ViewModels\BankCodeBankNameViewModel.cs" />
+    <Compile Include="ViewModels\BatchPayment\BatchPaymentDetailViewModel.cs" />
+    <Compile Include="ViewModels\BatchPayment\BatchPaymentFilter.cs" />
+    <Compile Include="ViewModels\BatchPayment\BatchPaymentItemViewModel.cs" />
+    <Compile Include="ViewModels\BatchPayment\BatchPaymentViewModel.cs" />
+    <Compile Include="ViewModels\BatchPayment\UserForSettledViewModel.cs" />
+    <Compile Include="ViewModels\BatchApplication\BatchApplicationCourse.cs" />
+    <Compile Include="ViewModels\BatchApplication\BatchApplicationApplicant.cs" />
+    <Compile Include="ViewModels\BatchApplication\BatchApplicationViewModel.cs" />
+    <Compile Include="ViewModels\ClassViewModel.cs" />
+    <Compile Include="ViewModels\CmsContentTypeViewModel.cs" />
+    <Compile Include="ViewModels\ContentViewModel.cs" />
+    <Compile Include="ViewModels\CMSBindingModel.cs" />
+    <Compile Include="ViewModels\CourseCalendarViewModel.cs" />
+    <Compile Include="ViewModels\CourseCategorieTranViewModel.cs" />
+    <Compile Include="ViewModels\CourseCategoryViewModel.cs" />
+    <Compile Include="ViewModels\CourseDocumentViewModel.cs" />
+    <Compile Include="ViewModels\CourseInformationViewModel.cs" />
+    <Compile Include="ViewModels\CourseReExaminationBindingModel.cs" />
+    <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\CriteriaViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentCalendarViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentClassDetailViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentCoureMaterial.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentDetailViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentExamDetailViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentInvoiceReceiptViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentMyCourseDetailViewModel.cs" />
+    <Compile Include="ViewModels\Enrollment\EnrollmentMyCourseViewModel.cs" />
+    <Compile Include="ViewModels\ExamViewModel.cs" />
+    <Compile Include="ViewModels\FileReturnViewModel.cs" />
+    <Compile Include="ViewModels\HandleContentBindingModel.cs" />
+    <Compile Include="ViewModels\InvoiceReminderViewModel.cs" />
+    <Compile Include="ViewModels\InvoiceViewModel.cs" />
+    <Compile Include="ViewModels\Invoice\WaivedHisrotyFilter.cs" />
+    <Compile Include="ViewModels\Invoice\WaivedPaymentApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\KeywordBindingModel.cs" />
+    <Compile Include="ViewModels\LandingPageViewModel.cs" />
+    <Compile Include="ViewModels\LanguageViewModels.cs" />
+    <Compile Include="ViewModels\LessonViewModel.cs" />
+    <Compile Include="ViewModels\LocalizationLabelViewModel.cs" />
+    <Compile Include="ViewModels\MakeupClass\AssignLessonViewModel.cs" />
+    <Compile Include="ViewModels\MakeupClass\AttendanceViewModel.cs" />
+    <Compile Include="ViewModels\MakeupClass\ClassCodeViewModel.cs" />
+    <Compile Include="ViewModels\MakeupClass\MakeupClassViewModel.cs" />
+    <Compile Include="ViewModels\MakeupClass\StudentSearchViewModel.cs" />
+    <Compile Include="ViewModels\Notification\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\ParticularBindingModel.cs" />
+    <Compile Include="ViewModels\QualificationViewModel.cs" />
+    <Compile Include="ViewModels\RawCMSViewModel.cs" />
+    <Compile Include="ViewModels\RawCourseViewModel.cs" />
+    <Compile Include="ViewModels\RecommendationEmployerBindingModel.cs" />
+    <Compile Include="ViewModels\RelevantMembershipViewModel.cs" />
+    <Compile Include="ViewModels\RelevantWorkViewModel.cs" />
+    <Compile Include="ViewModels\SearchModel.cs" />
+    <Compile Include="ViewModels\SendMailModel.cs" />
+    <Compile Include="ViewModels\StudentAccount\StudentAccountBindingModel.cs" />
+    <Compile Include="ViewModels\StudentAccount\StudentAccountViewModel.cs" />
+    <Compile Include="ViewModels\StudentAccount\StudentSearching.cs" />
+    <Compile Include="ViewModels\StudentAndClassManagement\ApplicationDetailViewModel.cs" />
+    <Compile Include="ViewModels\StudentAndClassManagement\StudentClassManageViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\RefundTransaction\RefundTransactionApprovedHistoryViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\RefundTransaction\RefundTransactionViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\TransactionFilter.cs" />
+    <Compile Include="ViewModels\Transaction\TransactionViewModel.cs" />
+    <Compile Include="ViewModels\UserDocumentsBindingModel.cs" />
+    <Compile Include="ViewModels\UserDocumentTempViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\WorkExperienceBindingModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

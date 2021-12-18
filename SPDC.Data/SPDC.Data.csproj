@@ -1,0 +1,865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B0F62FD-B853-4BEA-AFEC-EDF16A5DE33D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPDC.Data</RootNamespace>
+    <AssemblyName>SPDC.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="IdentityConfig.cs" />
+    <Compile Include="IdentityStores.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\RepositoryExtension.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\202009110915477_initdb.cs" />
+    <Compile Include="Migrations\202009110915477_initdb.Designer.cs">
+      <DependentUpon>202009110915477_initdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009140326520_add_field_table_work_experience.cs" />
+    <Compile Include="Migrations\202009140326520_add_field_table_work_experience.Designer.cs">
+      <DependentUpon>202009140326520_add_field_table_work_experience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009140943503_updateCourseTable.cs" />
+    <Compile Include="Migrations\202009140943503_updateCourseTable.Designer.cs">
+      <DependentUpon>202009140943503_updateCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009151005063_add_field_re_exam.cs" />
+    <Compile Include="Migrations\202009151005063_add_field_re_exam.Designer.cs">
+      <DependentUpon>202009151005063_add_field_re_exam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009160930178_update_course_document_table.cs" />
+    <Compile Include="Migrations\202009160930178_update_course_document_table.Designer.cs">
+      <DependentUpon>202009160930178_update_course_document_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009170331124_drop_relationship_lesson_course_document.cs" />
+    <Compile Include="Migrations\202009170331124_drop_relationship_lesson_course_document.Designer.cs">
+      <DependentUpon>202009170331124_drop_relationship_lesson_course_document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009180749220_edit_from_year_experience.cs" />
+    <Compile Include="Migrations\202009180749220_edit_from_year_experience.Designer.cs">
+      <DependentUpon>202009180749220_edit_from_year_experience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009210909305_addcms.cs" />
+    <Compile Include="Migrations\202009210909305_addcms.Designer.cs">
+      <DependentUpon>202009210909305_addcms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241009297_addAdminEmail.cs" />
+    <Compile Include="Migrations\202009241009297_addAdminEmail.Designer.cs">
+      <DependentUpon>202009241009297_addAdminEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009250654024_updatecms.cs" />
+    <Compile Include="Migrations\202009250654024_updatecms.Designer.cs">
+      <DependentUpon>202009250654024_updatecms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009271202435_fixCourseFee.cs" />
+    <Compile Include="Migrations\202009271202435_fixCourseFee.Designer.cs">
+      <DependentUpon>202009271202435_fixCourseFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010041744156_updateCmsimage.cs" />
+    <Compile Include="Migrations\202010041744156_updateCmsimage.Designer.cs">
+      <DependentUpon>202010041744156_updateCmsimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010060216499_addCMCContentStatus.cs" />
+    <Compile Include="Migrations\202010060216499_addCMCContentStatus.Designer.cs">
+      <DependentUpon>202010060216499_addCMCContentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010070248405_updateApplication.cs" />
+    <Compile Include="Migrations\202010070248405_updateApplication.Designer.cs">
+      <DependentUpon>202010070248405_updateApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010080757352_update_field_follow_new_requirement.cs" />
+    <Compile Include="Migrations\202010080757352_update_field_follow_new_requirement.Designer.cs">
+      <DependentUpon>202010080757352_update_field_follow_new_requirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010091101226_updateappcourse.cs" />
+    <Compile Include="Migrations\202010091101226_updateappcourse.Designer.cs">
+      <DependentUpon>202010091101226_updateappcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010101442354_updatecoursedata.cs" />
+    <Compile Include="Migrations\202010101442354_updatecoursedata.Designer.cs">
+      <DependentUpon>202010101442354_updatecoursedata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010110829270_updatecourschema.cs" />
+    <Compile Include="Migrations\202010110829270_updatecourschema.Designer.cs">
+      <DependentUpon>202010110829270_updatecourschema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010120700059_updatecoursetype.cs" />
+    <Compile Include="Migrations\202010120700059_updatecoursetype.Designer.cs">
+      <DependentUpon>202010120700059_updatecoursetype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010120813130_updateeapp.cs" />
+    <Compile Include="Migrations\202010120813130_updateeapp.Designer.cs">
+      <DependentUpon>202010120813130_updateeapp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010121048364_uppdatecoursetranstr.cs" />
+    <Compile Include="Migrations\202010121048364_uppdatecoursetranstr.Designer.cs">
+      <DependentUpon>202010121048364_uppdatecoursetranstr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010130142295_appsetup.cs" />
+    <Compile Include="Migrations\202010130142295_appsetup.Designer.cs">
+      <DependentUpon>202010130142295_appsetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010130720249_addCMScontentTypeCNHK.cs" />
+    <Compile Include="Migrations\202010130720249_addCMScontentTypeCNHK.Designer.cs">
+      <DependentUpon>202010130720249_addCMScontentTypeCNHK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010140438436_addAppModuleIds.cs" />
+    <Compile Include="Migrations\202010140438436_addAppModuleIds.Designer.cs">
+      <DependentUpon>202010140438436_addAppModuleIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010150142491_addClients.cs" />
+    <Compile Include="Migrations\202010150142491_addClients.Designer.cs">
+      <DependentUpon>202010150142491_addClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010200654103_editApplication.cs" />
+    <Compile Include="Migrations\202010200654103_editApplication.Designer.cs">
+      <DependentUpon>202010200654103_editApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010220423359_fixApplication.cs" />
+    <Compile Include="Migrations\202010220423359_fixApplication.Designer.cs">
+      <DependentUpon>202010220423359_fixApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010220800527_fixApplication_v1.cs" />
+    <Compile Include="Migrations\202010220800527_fixApplication_v1.Designer.cs">
+      <DependentUpon>202010220800527_fixApplication_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010221605562_fixApplication_v2.cs" />
+    <Compile Include="Migrations\202010221605562_fixApplication_v2.Designer.cs">
+      <DependentUpon>202010221605562_fixApplication_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010230732100_fixApplication_v3.cs" />
+    <Compile Include="Migrations\202010230732100_fixApplication_v3.Designer.cs">
+      <DependentUpon>202010230732100_fixApplication_v3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010230916410_fixApplication_v4.cs" />
+    <Compile Include="Migrations\202010230916410_fixApplication_v4.Designer.cs">
+      <DependentUpon>202010230916410_fixApplication_v4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010231200596_updateCourseTranCustomer.cs" />
+    <Compile Include="Migrations\202010231200596_updateCourseTranCustomer.Designer.cs">
+      <DependentUpon>202010231200596_updateCourseTranCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010260316295_fixApplication_v5.cs" />
+    <Compile Include="Migrations\202010260316295_fixApplication_v5.Designer.cs">
+      <DependentUpon>202010260316295_fixApplication_v5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011020457431_add_submission_date_application_table.cs" />
+    <Compile Include="Migrations\202011020457431_add_submission_date_application_table.Designer.cs">
+      <DependentUpon>202011020457431_add_submission_date_application_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011020753342_add_graduation_date_to_application_table.cs" />
+    <Compile Include="Migrations\202011020753342_add_graduation_date_to_application_table.Designer.cs">
+      <DependentUpon>202011020753342_add_graduation_date_to_application_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011030434286_change_structure_enrollment_status_table.cs" />
+    <Compile Include="Migrations\202011030434286_change_structure_enrollment_status_table.Designer.cs">
+      <DependentUpon>202011030434286_change_structure_enrollment_status_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011040802249_update_field_application_table.cs" />
+    <Compile Include="Migrations\202011040802249_update_field_application_table.Designer.cs">
+      <DependentUpon>202011040802249_update_field_application_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011050719150_addTotalHrs.cs" />
+    <Compile Include="Migrations\202011050719150_addTotalHrs.Designer.cs">
+      <DependentUpon>202011050719150_addTotalHrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011060948265_addModuleCombinationFee.cs" />
+    <Compile Include="Migrations\202011060948265_addModuleCombinationFee.Designer.cs">
+      <DependentUpon>202011060948265_addModuleCombinationFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011300300229_update-cms-content-table.cs" />
+    <Compile Include="Migrations\202011300300229_update-cms-content-table.Designer.cs">
+      <DependentUpon>202011300300229_update-cms-content-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012080308019_add-field-to-particular.cs" />
+    <Compile Include="Migrations\202012080308019_add-field-to-particular.Designer.cs">
+      <DependentUpon>202012080308019_add-field-to-particular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012090249268_create-table-subscription.cs" />
+    <Compile Include="Migrations\202012090249268_create-table-subscription.Designer.cs">
+      <DependentUpon>202012090249268_create-table-subscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012090448403_remove-unnecessary-field.cs" />
+    <Compile Include="Migrations\202012090448403_remove-unnecessary-field.Designer.cs">
+      <DependentUpon>202012090448403_remove-unnecessary-field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012090947408_update-relationship-course-location.cs" />
+    <Compile Include="Migrations\202012090947408_update-relationship-course-location.Designer.cs">
+      <DependentUpon>202012090947408_update-relationship-course-location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012100658114_update-field-course-documentation.cs" />
+    <Compile Include="Migrations\202012100658114_update-field-course-documentation.Designer.cs">
+      <DependentUpon>202012100658114_update-field-course-documentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012110741126_add-field-course-table.cs" />
+    <Compile Include="Migrations\202012110741126_add-field-course-table.Designer.cs">
+      <DependentUpon>202012110741126_add-field-course-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012220711259_add-course-class-setup-approval.cs" />
+    <Compile Include="Migrations\202012220711259_add-course-class-setup-approval.Designer.cs">
+      <DependentUpon>202012220711259_add-course-class-setup-approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231507115_updatecmsmatched.cs" />
+    <Compile Include="Migrations\202012231507115_updatecmsmatched.Designer.cs">
+      <DependentUpon>202012231507115_updatecmsmatched.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012250959059_add-relationship-payment-invoice.cs" />
+    <Compile Include="Migrations\202012250959059_add-relationship-payment-invoice.Designer.cs">
+      <DependentUpon>202012250959059_add-relationship-payment-invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012270652218_add-table-application-approve-history.cs" />
+    <Compile Include="Migrations\202012270652218_add-table-application-approve-history.Designer.cs">
+      <DependentUpon>202012270652218_add-table-application-approve-history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280232543_update-invoice-item-and-invoice-table.cs" />
+    <Compile Include="Migrations\202012280232543_update-invoice-item-and-invoice-table.Designer.cs">
+      <DependentUpon>202012280232543_update-invoice-item-and-invoice-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012290812562_removeRequiredSubcription.cs" />
+    <Compile Include="Migrations\202012290812562_removeRequiredSubcription.Designer.cs">
+      <DependentUpon>202012290812562_removeRequiredSubcription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101050905269_addNotification.cs" />
+    <Compile Include="Migrations\202101050905269_addNotification.Designer.cs">
+      <DependentUpon>202101050905269_addNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101110715510_UpdateTransactionWaivePayment.cs" />
+    <Compile Include="Migrations\202101110715510_UpdateTransactionWaivePayment.Designer.cs">
+      <DependentUpon>202101110715510_UpdateTransactionWaivePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101120947580_addAdditionalClassApproval.cs" />
+    <Compile Include="Migrations\202101120947580_addAdditionalClassApproval.Designer.cs">
+      <DependentUpon>202101120947580_addAdditionalClassApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121448308_addAdditionalClassApproval1.cs" />
+    <Compile Include="Migrations\202101121448308_addAdditionalClassApproval1.Designer.cs">
+      <DependentUpon>202101121448308_addAdditionalClassApproval1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121011531_update-paymenttransaction-identity.cs" />
+    <Compile Include="Migrations\202101121011531_update-paymenttransaction-identity.Designer.cs">
+      <DependentUpon>202101121011531_update-paymenttransaction-identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101130226470_editCourse.cs" />
+    <Compile Include="Migrations\202101130226470_editCourse.Designer.cs">
+      <DependentUpon>202101130226470_editCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101130724550_addSystemConfig.cs" />
+    <Compile Include="Migrations\202101130724550_addSystemConfig.Designer.cs">
+      <DependentUpon>202101130724550_addSystemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101130949058_changeForCMSorder.cs" />
+    <Compile Include="Migrations\202101130949058_changeForCMSorder.Designer.cs">
+      <DependentUpon>202101130949058_changeForCMSorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101140458226_remove-required-refno.cs" />
+    <Compile Include="Migrations\202101140458226_remove-required-refno.Designer.cs">
+      <DependentUpon>202101140458226_remove-required-refno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101140726405_create-tables-refund.cs" />
+    <Compile Include="Migrations\202101140726405_create-tables-refund.Designer.cs">
+      <DependentUpon>202101140726405_create-tables-refund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141612547_update-relationship-refund-transaction.cs" />
+    <Compile Include="Migrations\202101141612547_update-relationship-refund-transaction.Designer.cs">
+      <DependentUpon>202101141612547_update-relationship-refund-transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101231249082_add-tables-batch-payment.cs" />
+    <Compile Include="Migrations\202101231249082_add-tables-batch-payment.Designer.cs">
+      <DependentUpon>202101231249082_add-tables-batch-payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101240848064_add-field-batchpaymentamount.cs" />
+    <Compile Include="Migrations\202101240848064_add-field-batchpaymentamount.Designer.cs">
+      <DependentUpon>202101240848064_add-field-batchpaymentamount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251104040_fix-relationship-targetclass.cs" />
+    <Compile Include="Migrations\202101251104040_fix-relationship-targetclass.Designer.cs">
+      <DependentUpon>202101251104040_fix-relationship-targetclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101251120235_update-relationship-course-targetclass.cs" />
+    <Compile Include="Migrations\202101251120235_update-relationship-course-targetclass.Designer.cs">
+      <DependentUpon>202101251120235_update-relationship-course-targetclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101260324314_updateTargetClassKey.cs" />
+    <Compile Include="Migrations\202101260324314_updateTargetClassKey.Designer.cs">
+      <DependentUpon>202101260324314_updateTargetClassKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101260436237_update-relationship-TargetClass-ClassCommon.cs" />
+    <Compile Include="Migrations\202101260436237_update-relationship-TargetClass-ClassCommon.Designer.cs">
+      <DependentUpon>202101260436237_update-relationship-TargetClass-ClassCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101271620452_add-field-to-PaymenTransactionDocument.cs" />
+    <Compile Include="Migrations\202101271620452_add-field-to-PaymenTransactionDocument.Designer.cs">
+      <DependentUpon>202101271620452_add-field-to-PaymenTransactionDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311427214_add-three-fields-to-application-table.cs" />
+    <Compile Include="Migrations\202101311427214_add-three-fields-to-application-table.Designer.cs">
+      <DependentUpon>202101311427214_add-three-fields-to-application-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102011249470_changeApplicationNumber.cs" />
+    <Compile Include="Migrations\202102011249470_changeApplicationNumber.Designer.cs">
+      <DependentUpon>202102011249470_changeApplicationNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102030434472_add_temp_table.cs" />
+    <Compile Include="Migrations\202102030434472_add_temp_table.Designer.cs">
+      <DependentUpon>202102030434472_add_temp_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102071145598_UpdateTableTemp.cs" />
+    <Compile Include="Migrations\202102071145598_UpdateTableTemp.Designer.cs">
+      <DependentUpon>202102071145598_UpdateTableTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102080603481_EditWorkExperienceTemp.cs" />
+    <Compile Include="Migrations\202102080603481_EditWorkExperienceTemp.Designer.cs">
+      <DependentUpon>202102080603481_EditWorkExperienceTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102080823516_EditQualificationTempTran.cs" />
+    <Compile Include="Migrations\202102080823516_EditQualificationTempTran.Designer.cs">
+      <DependentUpon>202102080823516_EditQualificationTempTran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102080836584_EditWorkExperienceTemp1.cs" />
+    <Compile Include="Migrations\202102080836584_EditWorkExperienceTemp1.Designer.cs">
+      <DependentUpon>202102080836584_EditWorkExperienceTemp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102081116168_UpdateWorkExperienceTemp.cs" />
+    <Compile Include="Migrations\202102081116168_UpdateWorkExperienceTemp.Designer.cs">
+      <DependentUpon>202102081116168_UpdateWorkExperienceTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102082048253_UpdateAllTableTemp.cs" />
+    <Compile Include="Migrations\202102082048253_UpdateAllTableTemp.Designer.cs">
+      <DependentUpon>202102082048253_UpdateAllTableTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102190742484_AddCmsReleaseDateAndAttendanceExam.cs" />
+    <Compile Include="Migrations\202102190742484_AddCmsReleaseDateAndAttendanceExam.Designer.cs">
+      <DependentUpon>202102190742484_AddCmsReleaseDateAndAttendanceExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102220434477_update_axem.cs" />
+    <Compile Include="Migrations\202102220434477_update_axem.Designer.cs">
+      <DependentUpon>202102220434477_update_axem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102220758486_update_axem_attendance.cs" />
+    <Compile Include="Migrations\202102220758486_update_axem_attendance.Designer.cs">
+      <DependentUpon>202102220758486_update_axem_attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102220846554_update-admin-permission-model.cs" />
+    <Compile Include="Migrations\202102220846554_update-admin-permission-model.Designer.cs">
+      <DependentUpon>202102220846554_update-admin-permission-model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102230901137_remove_exam_tran.cs" />
+    <Compile Include="Migrations\202102230901137_remove_exam_tran.Designer.cs">
+      <DependentUpon>202102230901137_remove_exam_tran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102240956007_update_examapplication_nullable.cs" />
+    <Compile Include="Migrations\202102240956007_update_examapplication_nullable.Designer.cs">
+      <DependentUpon>202102240956007_update_examapplication_nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102260233560_update_lesson_model.cs" />
+    <Compile Include="Migrations\202102260233560_update_lesson_model.Designer.cs">
+      <DependentUpon>202102260233560_update_lesson_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102260859116_AddTableStorageApplicationFile.cs" />
+    <Compile Include="Migrations\202102260859116_AddTableStorageApplicationFile.Designer.cs">
+      <DependentUpon>202102260859116_AddTableStorageApplicationFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102281410305_change_attendance_relationship.cs" />
+    <Compile Include="Migrations\202102281410305_change_attendance_relationship.Designer.cs">
+      <DependentUpon>202102281410305_change_attendance_relationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103010429136_add_verion_management.cs" />
+    <Compile Include="Migrations\202103010429136_add_verion_management.Designer.cs">
+      <DependentUpon>202103010429136_add_verion_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103021159287_AddFieldCheckReExamForInvoice.cs" />
+    <Compile Include="Migrations\202103021159287_AddFieldCheckReExamForInvoice.Designer.cs">
+      <DependentUpon>202103021159287_AddFieldCheckReExamForInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103030343228_UpDateExamApplication.cs" />
+    <Compile Include="Migrations\202103030343228_UpDateExamApplication.Designer.cs">
+      <DependentUpon>202103030343228_UpDateExamApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103030748016_add_common_data_table.cs" />
+    <Compile Include="Migrations\202103030748016_add_common_data_table.Designer.cs">
+      <DependentUpon>202103030748016_add_common_data_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103031049464_update_course_data_table.cs" />
+    <Compile Include="Migrations\202103031049464_update_course_data_table.Designer.cs">
+      <DependentUpon>202103031049464_update_course_data_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103090345087_UpdateLengthEmailStatus.cs" />
+    <Compile Include="Migrations\202103090345087_UpdateLengthEmailStatus.Designer.cs">
+      <DependentUpon>202103090345087_UpdateLengthEmailStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103200933136_UpdateUserDocumentTemp.cs" />
+    <Compile Include="Migrations\202103200933136_UpdateUserDocumentTemp.Designer.cs">
+      <DependentUpon>202103200933136_UpdateUserDocumentTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AcceptedBankRepository.cs" />
+    <Compile Include="Repositories\AdditionalClassesApprovalRepository.cs" />
+    <Compile Include="Repositories\AdminPermissionRepository.cs" />
+    <Compile Include="Repositories\ApplicationApprovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\ApplicationHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\ApplicationRepository.cs" />
+    <Compile Include="Repositories\BatchPaymentRepository.cs" />
+    <Compile Include="Repositories\ClassAppovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\ClassHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\CommonDataRepository.cs" />
+    <Compile Include="Repositories\CourseAppovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\CourseHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\EmployerRecommendationsTempRepository.cs" />
+    <Compile Include="Repositories\EmployerRecommendationsTransTempRepository.cs" />
+    <Compile Include="Repositories\LessonAttendanceRepository.cs" />
+    <Compile Include="Repositories\MakeUpAttendenceRepository.cs" />
+    <Compile Include="Repositories\ExamApplicationRepository.cs" />
+    <Compile Include="Repositories\IExamApplicationRepository.cs" />
+    <Compile Include="Repositories\MakeupClassRepository.cs" />
+    <Compile Include="Repositories\NotificationUserRepository.cs" />
+    <Compile Include="Repositories\InvoiceItemRepository.cs" />
+    <Compile Include="Repositories\InvoiceRepository.cs" />
+    <Compile Include="Repositories\NotificationRepository.cs" />
+    <Compile Include="Repositories\ParticularTempTranRepository.cs" />
+    <Compile Include="Repositories\ParticularTempRepository.cs" />
+    <Compile Include="Repositories\ParticularTranRepository.cs" />
+    <Compile Include="Repositories\PaymentTransactionDocumentRepository.cs" />
+    <Compile Include="Repositories\PaymentTransactionRepository.cs" />
+    <Compile Include="Repositories\QualificationTempRepository.cs" />
+    <Compile Include="Repositories\QualificationTransTempRepository.cs" />
+    <Compile Include="Repositories\RefundTransactionApprovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\RefundTransactionDocumentRepository.cs" />
+    <Compile Include="Repositories\RefundTransactionHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\RefundTransactionRepository.cs" />
+    <Compile Include="Repositories\RelevantMembershipRepository.cs" />
+    <Compile Include="Repositories\RelevantWorkRepository.cs" />
+    <Compile Include="Repositories\ApplicationSetupRepository.cs" />
+    <Compile Include="Repositories\ApplicationTransRepository.cs" />
+    <Compile Include="Repositories\ClassCommonRepository.cs" />
+    <Compile Include="Repositories\ClassRepository.cs" />
+    <Compile Include="Repositories\CMSContentRepository.cs" />
+    <Compile Include="Repositories\CMSContentTypeRepository.cs" />
+    <Compile Include="Repositories\CMSImageRepository.cs" />
+    <Compile Include="Repositories\CombinationRepository.cs" />
+    <Compile Include="Repositories\ContentRepository.cs" />
+    <Compile Include="Repositories\ContentTypeRepository.cs" />
+    <Compile Include="Repositories\CourseCategoryRepository.cs" />
+    <Compile Include="Repositories\CourseDocumentsRepository.cs" />
+    <Compile Include="Repositories\CourseLocationRepository.cs" />
+    <Compile Include="Repositories\CourseLocationTransRepository.cs" />
+    <Compile Include="Repositories\LevelofApprovalRepository.cs" />
+    <Compile Include="Repositories\CourseRepository.cs" />
+    <Compile Include="Repositories\CourseTransRepository.cs" />
+    <Compile Include="Repositories\CourseTypeRepository.cs" />
+    <Compile Include="Repositories\DocumentRepository.cs" />
+    <Compile Include="Repositories\EmployerRecommendationsRepository.cs" />
+    <Compile Include="Repositories\EmployerRecommendationsTransRepository.cs" />
+    <Compile Include="Repositories\EnquiryRepository.cs" />
+    <Compile Include="Repositories\EnrollmentStatusRepository.cs" />
+    <Compile Include="Repositories\KeywordRepository.cs" />
+    <Compile Include="Repositories\LanguageRepository.cs" />
+    <Compile Include="Repositories\LecturerRepository.cs" />
+    <Compile Include="Repositories\ExamRepository.cs" />
+    <Compile Include="Repositories\LessionRepository.cs" />
+    <Compile Include="Repositories\MediumOfInstructionRepository.cs" />
+    <Compile Include="Repositories\ModuleRepository.cs" />
+    <Compile Include="Repositories\ModuleTranRepository.cs" />
+    <Compile Include="Repositories\ParticularRepository.cs" />
+    <Compile Include="Repositories\ProgrammeLeaderRepository.cs" />
+    <Compile Include="Repositories\QualificationRepository.cs" />
+    <Compile Include="Repositories\QualificationTransRepository.cs" />
+    <Compile Include="Repositories\ResitExamApplicationRepository.cs" />
+    <Compile Include="Repositories\ResitExamRepository.cs" />
+    <Compile Include="Repositories\SubClassApprovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\SubClassDraftRepository.cs" />
+    <Compile Include="Repositories\SubClassHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\SystemPrivilegeRepository.cs" />
+    <Compile Include="Repositories\TargetClassRepository.cs" />
+    <Compile Include="Repositories\UserDocumentTempRepository.cs" />
+    <Compile Include="Repositories\UserDocumentRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\UserSubscriptionRepository.cs" />
+    <Compile Include="Repositories\VersionRepository.cs" />
+    <Compile Include="Repositories\WaivedHistoryDocumentRepository.cs" />
+    <Compile Include="Repositories\WaiverApprovedStatusHistoryRepository.cs" />
+    <Compile Include="Repositories\WorkExperienceTempRepository.cs" />
+    <Compile Include="Repositories\WorkExperienceRepository.cs" />
+    <Compile Include="Repositories\WorkExperienceTransTempRepository.cs" />
+    <Compile Include="Repositories\WorkExperienceTransRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPDC.Common\SPDC.Common.csproj">
+      <Project>{82042C05-77EB-46A3-B473-35153DBEBE3A}</Project>
+      <Name>SPDC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPDC.Model\SPDC.Model.csproj">
+      <Project>{DEF0DDE6-D99F-4DDA-BDF4-02D46BADF3E5}</Project>
+      <Name>SPDC.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009110915477_initdb.resx">
+      <DependentUpon>202009110915477_initdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009140326520_add_field_table_work_experience.resx">
+      <DependentUpon>202009140326520_add_field_table_work_experience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009140943503_updateCourseTable.resx">
+      <DependentUpon>202009140943503_updateCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009151005063_add_field_re_exam.resx">
+      <DependentUpon>202009151005063_add_field_re_exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009160930178_update_course_document_table.resx">
+      <DependentUpon>202009160930178_update_course_document_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009170331124_drop_relationship_lesson_course_document.resx">
+      <DependentUpon>202009170331124_drop_relationship_lesson_course_document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009180749220_edit_from_year_experience.resx">
+      <DependentUpon>202009180749220_edit_from_year_experience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009210909305_addcms.resx">
+      <DependentUpon>202009210909305_addcms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241009297_addAdminEmail.resx">
+      <DependentUpon>202009241009297_addAdminEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009250654024_updatecms.resx">
+      <DependentUpon>202009250654024_updatecms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009271202435_fixCourseFee.resx">
+      <DependentUpon>202009271202435_fixCourseFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010041744156_updateCmsimage.resx">
+      <DependentUpon>202010041744156_updateCmsimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010060216499_addCMCContentStatus.resx">
+      <DependentUpon>202010060216499_addCMCContentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010070248405_updateApplication.resx">
+      <DependentUpon>202010070248405_updateApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010080757352_update_field_follow_new_requirement.resx">
+      <DependentUpon>202010080757352_update_field_follow_new_requirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010091101226_updateappcourse.resx">
+      <DependentUpon>202010091101226_updateappcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010101442354_updatecoursedata.resx">
+      <DependentUpon>202010101442354_updatecoursedata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010110829270_updatecourschema.resx">
+      <DependentUpon>202010110829270_updatecourschema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010120700059_updatecoursetype.resx">
+      <DependentUpon>202010120700059_updatecoursetype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010120813130_updateeapp.resx">
+      <DependentUpon>202010120813130_updateeapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121048364_uppdatecoursetranstr.resx">
+      <DependentUpon>202010121048364_uppdatecoursetranstr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010130142295_appsetup.resx">
+      <DependentUpon>202010130142295_appsetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010130720249_addCMScontentTypeCNHK.resx">
+      <DependentUpon>202010130720249_addCMScontentTypeCNHK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010140438436_addAppModuleIds.resx">
+      <DependentUpon>202010140438436_addAppModuleIds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010150142491_addClients.resx">
+      <DependentUpon>202010150142491_addClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010200654103_editApplication.resx">
+      <DependentUpon>202010200654103_editApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010220423359_fixApplication.resx">
+      <DependentUpon>202010220423359_fixApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010220800527_fixApplication_v1.resx">
+      <DependentUpon>202010220800527_fixApplication_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010221605562_fixApplication_v2.resx">
+      <DependentUpon>202010221605562_fixApplication_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010230732100_fixApplication_v3.resx">
+      <DependentUpon>202010230732100_fixApplication_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010230916410_fixApplication_v4.resx">
+      <DependentUpon>202010230916410_fixApplication_v4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010231200596_updateCourseTranCustomer.resx">
+      <DependentUpon>202010231200596_updateCourseTranCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010260316295_fixApplication_v5.resx">
+      <DependentUpon>202010260316295_fixApplication_v5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011020457431_add_submission_date_application_table.resx">
+      <DependentUpon>202011020457431_add_submission_date_application_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011020753342_add_graduation_date_to_application_table.resx">
+      <DependentUpon>202011020753342_add_graduation_date_to_application_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030434286_change_structure_enrollment_status_table.resx">
+      <DependentUpon>202011030434286_change_structure_enrollment_status_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011040802249_update_field_application_table.resx">
+      <DependentUpon>202011040802249_update_field_application_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011050719150_addTotalHrs.resx">
+      <DependentUpon>202011050719150_addTotalHrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011060948265_addModuleCombinationFee.resx">
+      <DependentUpon>202011060948265_addModuleCombinationFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011300300229_update-cms-content-table.resx">
+      <DependentUpon>202011300300229_update-cms-content-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012080308019_add-field-to-particular.resx">
+      <DependentUpon>202012080308019_add-field-to-particular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012090249268_create-table-subscription.resx">
+      <DependentUpon>202012090249268_create-table-subscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012090448403_remove-unnecessary-field.resx">
+      <DependentUpon>202012090448403_remove-unnecessary-field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012090947408_update-relationship-course-location.resx">
+      <DependentUpon>202012090947408_update-relationship-course-location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012100658114_update-field-course-documentation.resx">
+      <DependentUpon>202012100658114_update-field-course-documentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012110741126_add-field-course-table.resx">
+      <DependentUpon>202012110741126_add-field-course-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012220711259_add-course-class-setup-approval.resx">
+      <DependentUpon>202012220711259_add-course-class-setup-approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231507115_updatecmsmatched.resx">
+      <DependentUpon>202012231507115_updatecmsmatched.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012250959059_add-relationship-payment-invoice.resx">
+      <DependentUpon>202012250959059_add-relationship-payment-invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012270652218_add-table-application-approve-history.resx">
+      <DependentUpon>202012270652218_add-table-application-approve-history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280232543_update-invoice-item-and-invoice-table.resx">
+      <DependentUpon>202012280232543_update-invoice-item-and-invoice-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012290812562_removeRequiredSubcription.resx">
+      <DependentUpon>202012290812562_removeRequiredSubcription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101050905269_addNotification.resx">
+      <DependentUpon>202101050905269_addNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101110715510_UpdateTransactionWaivePayment.resx">
+      <DependentUpon>202101110715510_UpdateTransactionWaivePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101120947580_addAdditionalClassApproval.resx">
+      <DependentUpon>202101120947580_addAdditionalClassApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121448308_addAdditionalClassApproval1.resx">
+      <DependentUpon>202101121448308_addAdditionalClassApproval1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121011531_update-paymenttransaction-identity.resx">
+      <DependentUpon>202101121011531_update-paymenttransaction-identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101130226470_editCourse.resx">
+      <DependentUpon>202101130226470_editCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101130724550_addSystemConfig.resx">
+      <DependentUpon>202101130724550_addSystemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101130949058_changeForCMSorder.resx">
+      <DependentUpon>202101130949058_changeForCMSorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101140458226_remove-required-refno.resx">
+      <DependentUpon>202101140458226_remove-required-refno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101140726405_create-tables-refund.resx">
+      <DependentUpon>202101140726405_create-tables-refund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141612547_update-relationship-refund-transaction.resx">
+      <DependentUpon>202101141612547_update-relationship-refund-transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101231249082_add-tables-batch-payment.resx">
+      <DependentUpon>202101231249082_add-tables-batch-payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101240848064_add-field-batchpaymentamount.resx">
+      <DependentUpon>202101240848064_add-field-batchpaymentamount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251104040_fix-relationship-targetclass.resx">
+      <DependentUpon>202101251104040_fix-relationship-targetclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101251120235_update-relationship-course-targetclass.resx">
+      <DependentUpon>202101251120235_update-relationship-course-targetclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101260324314_updateTargetClassKey.resx">
+      <DependentUpon>202101260324314_updateTargetClassKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101260436237_update-relationship-TargetClass-ClassCommon.resx">
+      <DependentUpon>202101260436237_update-relationship-TargetClass-ClassCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101271620452_add-field-to-PaymenTransactionDocument.resx">
+      <DependentUpon>202101271620452_add-field-to-PaymenTransactionDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311427214_add-three-fields-to-application-table.resx">
+      <DependentUpon>202101311427214_add-three-fields-to-application-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102011249470_changeApplicationNumber.resx">
+      <DependentUpon>202102011249470_changeApplicationNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102030434472_add_temp_table.resx">
+      <DependentUpon>202102030434472_add_temp_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102071145598_UpdateTableTemp.resx">
+      <DependentUpon>202102071145598_UpdateTableTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102080603481_EditWorkExperienceTemp.resx">
+      <DependentUpon>202102080603481_EditWorkExperienceTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102080823516_EditQualificationTempTran.resx">
+      <DependentUpon>202102080823516_EditQualificationTempTran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102080836584_EditWorkExperienceTemp1.resx">
+      <DependentUpon>202102080836584_EditWorkExperienceTemp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102081116168_UpdateWorkExperienceTemp.resx">
+      <DependentUpon>202102081116168_UpdateWorkExperienceTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102082048253_UpdateAllTableTemp.resx">
+      <DependentUpon>202102082048253_UpdateAllTableTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102190742484_AddCmsReleaseDateAndAttendanceExam.resx">
+      <DependentUpon>202102190742484_AddCmsReleaseDateAndAttendanceExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102220434477_update_axem.resx">
+      <DependentUpon>202102220434477_update_axem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102220758486_update_axem_attendance.resx">
+      <DependentUpon>202102220758486_update_axem_attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102220846554_update-admin-permission-model.resx">
+      <DependentUpon>202102220846554_update-admin-permission-model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102230901137_remove_exam_tran.resx">
+      <DependentUpon>202102230901137_remove_exam_tran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102240956007_update_examapplication_nullable.resx">
+      <DependentUpon>202102240956007_update_examapplication_nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102260233560_update_lesson_model.resx">
+      <DependentUpon>202102260233560_update_lesson_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102260859116_AddTableStorageApplicationFile.resx">
+      <DependentUpon>202102260859116_AddTableStorageApplicationFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102281410305_change_attendance_relationship.resx">
+      <DependentUpon>202102281410305_change_attendance_relationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103010429136_add_verion_management.resx">
+      <DependentUpon>202103010429136_add_verion_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103021159287_AddFieldCheckReExamForInvoice.resx">
+      <DependentUpon>202103021159287_AddFieldCheckReExamForInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103030343228_UpDateExamApplication.resx">
+      <DependentUpon>202103030343228_UpDateExamApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103030748016_add_common_data_table.resx">
+      <DependentUpon>202103030748016_add_common_data_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103031049464_update_course_data_table.resx">
+      <DependentUpon>202103031049464_update_course_data_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103090345087_UpdateLengthEmailStatus.resx">
+      <DependentUpon>202103090345087_UpdateLengthEmailStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103200933136_UpdateUserDocumentTemp.resx">
+      <DependentUpon>202103200933136_UpdateUserDocumentTemp.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

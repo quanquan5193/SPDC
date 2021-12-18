@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+
+        ,
+
+        div {
+            text-align: center;
+        }
+
+        ,
+
+        span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>你好， @Model.DisplayName!<br /></p>
+        <div>
+            @Model.CourseName
+            <span>出席率不足 (@Model.ClassCode)</span>
+        </div>
+        <p>
+            由於閣下的出席率未能達到上述課程所訂的要求，故閣下未能獲發出席證書。<br /><br />
+        </p>
+        <p>
+            如有查詢，請致電2100 9000 或電郵spdc@hkic.edu.hk與我們聯絡。<br /><br />
+        </p>
+        <p>
+            謝謝!<br /><br />
+        </p>
+        <p>
+            建造專業進修院校(SPDC)<br />
+            香港建造學院
+        </p>
+    </div>
+</body>
+
+</html>

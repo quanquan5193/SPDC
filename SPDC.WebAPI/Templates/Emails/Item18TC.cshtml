@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+
+        ,
+        div {
+            text-align: center;
+        }
+
+        ,
+        span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>你好，@Model.DisplayName!<br /></p>
+        <div>
+            @Model.CourseName<br />
+            <span>開課提示 (@Model.ClassCode)</span>
+        </div>
+        <p>
+            上述課程將於 @Model.Commencement 開課，請準時出席有關課堂。<br /><br />
+        </p>
+        <p>
+            謝謝!<br /><br />
+        </p>
+        <p>
+            建造專業進修院校(SPDC)<br />
+            香港建造學院
+        </p>
+    </div>
+</body>
+
+</html>

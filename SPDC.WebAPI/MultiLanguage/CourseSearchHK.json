@@ -1,0 +1,63 @@
+{
+  "select_label": "請選擇",
+  "enter_keyword_label": "輸入關鍵詞",
+  "course_search_label": "搜尋課程",
+  "course_code_label": "課程編號",
+  "course_name_label": "課程名稱",
+  "course_category_label": {
+    "label": "課程種類",
+    "option_BIM": "建築信息模擬(BIM)",
+    "option_MIC": "組裝合成建築法(MiC)",
+    "option_gorvernment": "政府部門認可課程",
+    "option_work_contact": "公共工程合約認可課程",
+    "option_auto_cad": "電腦輔助繪圖",
+    "option_contract_admin": "合約管理",
+    "option_technology_quality": "建造技術及品質",
+    "option_management": "建造管理",
+    "option_protection": "環境保護",
+    "option_built_heritage": "文物保育"
+  },
+  "Table": {
+    "Course_category": "課程<br />種類",
+    "Course_code": "課程 <br />編號",
+    "Course_name": "課程名稱 <br /> （英文)",
+    "Course_name_tc": "課程名稱 <br /> （中文）",
+    "Duration": "授課期 <br /> （總時數）",
+    "Course_fee": "學費 <br /> （港幣）",
+    "Target_class_size": "預計每班 <br /> 學額",
+    "With_exam": "包含 <br /> 考試",
+    "With_modules": "包含 <br /> 單元",
+    "Display_course_on_website": "於網站 <br /> 顯示課程 <br /> 資料",
+    "Approval_status": "課程批核狀態"
+  },
+  "course_mode_label": {
+    "label": "課程制式 （全日制/兼讀制）",
+    "option_fulltime": "全日制",
+    "option_parttime": "兼讀制"
+  },
+  "course_location_label": {
+    "label": "上課地點",
+    "option1": "九龍 九龍灣大業街 44 號香港建造學院九龍灣院校"
+  },
+  "keyword_search_label": "關鍵詞搜尋",
+  "reset_label": "重設",
+  "search_label": "搜尋",
+  "search_result_label": "搜索結果",
+  "course_fee_label": "學費 (港幣)",
+  "duration_label": "授課期（總時數）",
+  "mode_of_study_label": "授課形式 （全日制/兼讀制）",
+  "prev_label": "上一頁",
+  "next_label": "下一頁",
+  "page_label": "頁",
+  "view_details": "查看詳情",
+  "course_code": "課程編號",
+  "course_name_english": "課程名稱（英文）",
+  "course_name_chinese": "課程名稱（中文）",
+  "display_website": "於網站顯示班別資料",
+  "select_all": "選擇全部",
+  "reset": "重設",
+  "search": "搜尋",
+  "course_found": "課程",
+  "create_new_course": "建立新內容",
+  "no_data": "沒有資料"
+}

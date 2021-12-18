@@ -1,0 +1,10 @@
+{
+  "item6": "Your course application has been returned.",
+  "item7": "Your course application is not successful",
+  "item19": "Please be informed that you have failed to fulfill the attendance requirement of course and therefore ineligible for awarding of the Attendance Certificate",
+  "item22": "Your certificate of course is ready to be collected. Please check your email account for more information.",
+  "item23": "The result of your participation in the examination is available. Please login your SPDC account for details.",
+  "item24": "Your application of resit examination of the captioned course has been confirmed. Please login your SPDC account for details.",
+  "item20": "Please be informed that you have failed to fulfill the attendance requirement of course and therefore ineligible for attending the examination",
+  "item35": "Your Application for @Model.CourseName has been created"
+}

@@ -1,0 +1,15 @@
+{
+  "create_new": "Create New _CN",
+  "student_account": "Student Account _CN",
+  "search_criteria": "Search Criteria _CN",
+  "name_english": "Student Name (English) _CN",
+  "name_chinese": "Student Name (Chinese) _CN",
+  "hkid_no": "HKID No. _CN",
+  "passport_no": "Passport No. _CN",
+  "cic_no": "CIC No. _CN",
+  "login_address": "Login Email Address _CN",
+  "reset": "Reset _CN",
+  "search": "Search _CN",
+  "cic_number": "CIC Number _CN",
+  "no_data": "No Data _CN"
+}

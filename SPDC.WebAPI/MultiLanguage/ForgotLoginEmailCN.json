@@ -1,0 +1,22 @@
+{
+  "forgot_login_email_address_label": "忘记帐号电邮",
+  "hk_id_no_label": "香港身份证号码",
+  "passport_no_label": "护照号码",
+  "date_of_birth_label": "出生日期",
+  "mobile_number_label": "手机号码",
+  "other_contact_email_address_label": "其他电邮地址",
+  "submit_label": "提交",
+  "back_label": "返回",
+  "invalid_hkid_no_message_label": "无效的香港身份证号码",
+  "enter_hkid_message_label": "请输入香港身份证号码",
+  "enter_date_of_birth_forgot_login_message_label": "请输入出生日期",
+  "invalid_date_of_birth_forgot_message_label": "无效的出生日期",
+  "enter_mobile_number_forgot_message_label": "请输入手机号码",
+  "invalid_mobile_number_forgot_message_label": "无效的手机号码",
+  "invalid_email_address_forgot_message_label": "无效的帐号电邮",
+  "enter_email_forgot_login_address_forgot_message_label": "请输入帐号电邮",
+  "invalid_passport_no_forgot_message_label": "无效的护照号码",
+  "enter_passport_no_forgot_message_label": "请输入护照号码",
+  "you_will_receive_an_email": "您将会收到一封电件，请在附件链接中找到您的帐户电邮并重置密码。",
+  "success": "忘记电邮地址 - 成功"
+}

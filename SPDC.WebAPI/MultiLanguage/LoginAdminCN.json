@@ -1,0 +1,13 @@
+{
+  "account_name": "帳戶名稱",
+  "password": "密碼",
+  "button_login": "登入",
+  "invalid_end_date": "Invalid End Date _CN",
+  "last_updated": "Last Updated On: _CN",
+  "inclement_weather_arrangement": "Inclement Weather Arrangement _CN",
+  "please_enter_description": "Please enter Description about the post _CN",
+  "url_link": "SEO URL link _CN",
+  "password_label": "Password _CN",
+  "email_cic_label": "Email/CIC _CN",
+  "login_label": "Login _CN"
+}

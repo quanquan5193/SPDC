@@ -1,0 +1,85 @@
+{
+  "Banner_Backgroubnd_Images": {
+    "option1": "背景图片 - EN/TC/SC",
+    "option2": "侧面导航图像 - EN/TC/SC",
+    "option3": "登陆页面 - 横幅 - EN",
+    "option4": "登陆页面 - 横幅 - TC",
+    "option5": "登陆页面 - 横幅 - SC",
+    "bulk_actions": "Bulk Actions _CN",
+    "create_new_content": "Create New Content _CN",
+    "no_data": "No Data _CN",
+    "image": "Image"
+  },
+  "Table": {
+    "Content_type": "Content Type_CN",
+    "Title": "Title_CN",
+    "Last_publish_date": "Last Publish Date_CN",
+    "Publish_status": "Publish Status_CN",
+    "Approval_status": "Approval Status_CN"
+  },
+  "Announcement": {
+    "option1": "通告 - EN",
+    "option2": "通告 - TC",
+    "option3": "通告 - SC",
+    "bulk_actions": "Bulk Actions _CN",
+    "create_new_announcement": "Create New Announcement _CN",
+    "no_data": "No Data _CN"
+  },
+  "New_And_Event": {
+    "option1": "最新消息 - EN",
+    "option2": "最新消息 - TC",
+    "option3": "最新消息 - SC",
+    "option4": "活动 - EN",
+    "option5": "活动 - TC",
+    "option6": "活动 - SC",
+    "create_new_content": "Create New Content _CN"
+  },
+  "Promotional_Items": {
+    "option1": "CMS 4 - EN",
+    "option2": "CMS 4 - TC",
+    "option3": "CMS 4 - SC",
+    "option4": "CMS 5 - EN",
+    "option5": "CMS 5 - TC",
+    "option6": "CMS 5 - SC",
+    "option7": "CMS 6 - EN",
+    "option8": "CMS 6 - TC",
+    "option9": "CMS 6 - SC"
+  },
+  "Other_Inner_Pages": {
+    "option1": "免责声明 - EN",
+    "option2": "免责声明 - TC",
+    "option3": "免责声明 - SC",
+    "option4": "私隐政策 - EN",
+    "option5": "私隐政策 - TC",
+    "option6": "私隐政策 - SC",
+    "option7": "FAQ - EN",
+    "option8": "FAQ - TC",
+    "option9": "FAQ - SC",
+    "option10": "校园资讯 - EN",
+    "option11": "校园资讯 - TC",
+    "option12": "校园资讯 - SC",
+    "option13": "有用连结 - EN",
+    "option14": "有用连结 - TC",
+    "option15": "有用连结 - SC",
+    "option16": "关于我们 - EN",
+    "option17": "关于我们 - TC",
+    "option18": "关于我们 - SC",
+    "option19": "联络我们 - EN",
+    "option20": "联络我们 - TC",
+    "option21": "联络我们 - SC"
+  },
+  "Inclement_Weather_Arrangement": {
+    "create_new_weather": "Create New Content _CN"
+  },
+  "bulk_actions": {
+    "option1": "发布",
+    "option2": "取消发布",
+    "bulk_actions_label": "Bulk Actions _CN"
+  },
+  "actions": {
+    "option1": "批核",
+    "option2": "不获批核",
+    "option3": "发布",
+    "option4": "取消发布"
+  }
+}

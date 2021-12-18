@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>閣下的申請已被退回</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            你好 @Model.DisplayName,
+        <p />
+        <br /><br />
+        <p style="text-align:center">
+            @Model.CourseName
+        </p><br />
+        <p>
+            閣下的申請已被退回。請提供報讀此課程所需的以下補充資料，並於此通知發出日期起計一個月內交回我們辦理。 如於所述日期前仍未收到閣下提供有關資料，閣下之申請將被視作放棄。<br />
+            補充資料:<br />
+            @Model.SupplementaryInformationRequired
+            <br />
+            如有查詢，請致電2100 9000 或電郵spdc@hkic.edu.hk與我們聯絡。<br /><br />
+
+            謝謝!<br /><br />
+
+            建造專業進修院校(SPDC)<br />
+            香港建造學院
+        </p>
+    </div>
+</body>
+
+</html>

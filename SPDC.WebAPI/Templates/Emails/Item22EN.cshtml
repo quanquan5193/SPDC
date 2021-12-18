@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+
+        ,
+
+        div {
+            text-align: center;
+        }
+
+        ,
+
+        span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Hello @Model.DisplayName,<br /></p>
+        <div>
+            @Model.CourseName
+            <span>Notification on Collection of Certificate (@Model.ClassCode)</span>
+        </div>
+        <p>
+            Your certificate of captioned course is ready to be collected. Please find related notification as attached
+            for details.<br /><br />
+        </p>
+        <p>
+            Thank you.
+        </p>
+        <p>
+            School of Professional Development in Construction (SPDC) <br />
+            Hong Kong Institute of Construction (HKIC)
+        </p>
+    </div>
+</body>
+
+</html>

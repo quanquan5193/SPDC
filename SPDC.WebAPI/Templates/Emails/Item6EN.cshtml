@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Your Course Application Has Been Returned</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Hello @Model.DisplayName,
+        <p />
+        <br /><br />
+        <p style="text-align:center">
+            @Model.CourseName
+        </p>
+        <br />
+        <p>
+            Your course application has been returned.<br />
+            Please provide the following supplementary information and re-submit to us for further process within 1 month from the date of this notification.  If we do not hear from you by that time, we will assume that you decided to withdraw this course application.<br />
+            Supplementary Information Required:<br />
+            @Model.Reason
+            <br />
+            Should you have enquiry, please contact us at telephone: 2100 900 or email: spdc@hkic.edu.hk<br /><br />
+
+            Thank you.<br /><br />
+
+            School of Professional Development in Construction (SPDC)<br />
+            Hong Kong Institute of Construction (HKIC)
+        </p>
+    </div>
+</body>
+
+</html>

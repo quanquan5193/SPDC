@@ -1,0 +1,11 @@
+{
+  "model_error_name": "Name is required",
+  "model_error_date": "Date is required",
+  "model_error_timeFromMin": "Time From MM is required",
+  "model_error_timeFromHrs": "Time From HH is required",
+  "model_error_timeToMin": "Time To MM is required",
+  "model_error_timeToHrs": "Time To HH is required",
+  "model_error_venue": "Venue is required",
+  "success_create": "Success",
+  "success_failure": "Failure"
+}

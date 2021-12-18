@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+
+        ,
+
+        div {
+            text-align: center;
+        }
+
+        ,
+
+        span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Hello，@Model.DisplayName!<br /></p>
+        <div>
+            @Model.CourseName<br />
+            <span>Reminder on Class Commencement (@Model.ClassCode)</span>
+        </div>
+        <p>
+            Please be reminded to attend the lesson of captioned course commencing on @Model.CommencementDate<br /><br />
+        </p>
+        <p>
+            Thank you.<br /><br />
+        </p>
+        <p>
+            School of Professional Development in Construction (SPDC)<br />
+            Hong Kong Institute of Construction (HKIC)
+        </p>
+    </div>
+</body>
+
+</html>

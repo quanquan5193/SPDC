@@ -1,0 +1,8 @@
+{
+  "resend_activation_email_label": "重新发送确认电邮",
+  "login_email_address_label": "帐号电邮",
+  "resend_activation_email_button": "重新发送确认电邮",
+  "back_label": "返回",
+  "invalid_email_address_resend_message_label": "无效的帐号电邮",
+  "enter_email_address_resend_message_label": "请输入帐号电邮"
+}

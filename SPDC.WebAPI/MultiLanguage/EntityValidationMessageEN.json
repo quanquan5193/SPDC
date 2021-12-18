@@ -1,0 +1,6 @@
+{
+  "new_and_confirm_password_different": "The new password and confirmation password do not match.",
+  "pass_and_confirm_password_different": "The password and confirmation password do not match.",
+  "pass_wrong_format": "Password must be longer than 6 and shorter than 15 characters, and contain at least one lowercase letter, one uppercase letter, and one digit",
+  "entity_validation_message": "Validation failed for one or more entities"
+}

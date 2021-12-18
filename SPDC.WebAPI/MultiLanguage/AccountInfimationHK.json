@@ -1,0 +1,29 @@
+{
+  "account_information_label": "帳號信息",
+  "username_label": "用戶名稱",
+  "email_address_label": "電郵地址（用作登入帳戶)",
+  "password_label": "密碼",
+  "change_password_label": "重設密碼",
+  "cic_no_label": "建造業議會編號",
+  "other_contact_email_label": "其他電郵地址",
+  "policy_accept_label": "本人不同意日後接受由建造業議會或香港建造學院發出有關議會或學院活動和與建造業相關的資訊。",
+  "interested_types_of_courses": "感興趣的課程種類",
+  "communication_language_label": {
+    "lable": "通訊語言",
+    "option_english": "English",
+    "option_chinese": "繁體中文"
+  },
+  "save_label": "儲存",
+  "enter_original_password_account_message_label": "請輸入目前密碼",
+  "invalid_original_password_account_message_label": "無效的目前密碼",
+  "enter_new_password_profile_account_message_label": "請輸入新密碼",
+  "invalid_password_profile_account_message_label": "密碼必須使用6-15個字符，且至少包含一個小寫字母，一個大寫字母和一位數字",
+  "enter_password_profile_account_message_label": "請輸入確認新密碼",
+  "invalid_confirm_new_password_account_message_label": "無效的新密碼",
+  "invalid_other_contact_email_account_message_label": "無效的其他電郵地址",
+  "original_label": "目前密碼",
+  "new_password_label": "新密碼",
+  "confirm_new_password_label": "確認新密碼",
+  "save_change_label": "儲存變更",
+  "invalid_original_password": "無效的密碼"
+}

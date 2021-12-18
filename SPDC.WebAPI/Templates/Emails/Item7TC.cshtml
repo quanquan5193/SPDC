@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>閣下的申請不被接納</title>
+    <style type="text/css">
+        html, body, p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            你好 @Model.DisplayName,
+        <p />
+        <br /><br />
+        <p style="text-align:center">
+            @Model.CourseName
+        </p><br />
+        <p>
+            閣下的申請不被接納，原因如下:<br />
+            原因:<br />
+            @Model.Reason
+            如有查詢，請致電2100 9000 或電郵spdc@hkic.edu.hk與我們聯絡。<br /><br />
+
+            謝謝!<br />
+
+            建造專業進修院校(SPDC)<br />
+            香港建造學院<br />
+        </p>
+    </div>
+</body>
+
+</html>

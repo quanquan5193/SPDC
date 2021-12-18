@@ -1,0 +1,23 @@
+{
+  "item1": "Welcome to SPDC Portal",
+  "item2": "Reset Your Password",
+  "item3": "Reset Your Password",
+  "item5": "Request for Approval – Course Application",
+  "item6": "Your Course Application Has Been Returned",
+  "item7": "Your Course Application Is Not Successful",
+  "item8": "Request Approved – Course Application",
+  "item9": "Request Returned – Course Application",
+  "item10": "Withdrawal of Course Application",
+  "item20": "Notification on Ineligible for Attending the Examination @Model.ClassCode",
+  "item33": "not implement",
+  "item35": "Your Application for @Model.CourseName has been created",
+  "item18": "Reminder on Class Commencement ({0})",
+  "item14": "Payment Reminder ({0})",
+  "item21": "Course Handout ({0})",
+  "item26": "Request for Approval – Reminder ({0})",
+  "item27": "Cancellation of Approval Request ({0})",
+  "item28": "Request for Approval – Reminder ({0})",
+  "item29": "Request for Approval – Reminder ({0})",
+  "item30": "Request Approved ({0})",
+  "item31": "Request Rejected ({0})"
+}

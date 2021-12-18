@@ -1,0 +1,18 @@
+{
+  "button_content": "Content Management",
+  "button_course": "Course Management",
+  "button_student_class": "Student and Class Management",
+  "button_e_survey": "E-Survey Management",
+  "button_account": "Account Management",
+  "button_reporting": "Reporting",
+  "button_system_param": "System Parameters",
+  "button_banner_background": "Banner & Background Image",
+  "button_new_event": "News and Events",
+  "button_promitional": "Promotional Items",
+  "button_announcement": "Announcement",
+  "button_other_inner_page": "Other Inner Page",
+  "manage_admin_account": "Manage Admin Account",
+  "manage_student_account": "Manage Student Account",
+  "inclement_weather_arrangement": "Inclement Weather Arrangement",
+  "wellcome_message": "Welcome Message"
+}

@@ -1,0 +1,15 @@
+{
+  "create_new": "建立",
+  "student_account": "學生帳戶",
+  "search_criteria": "搜尋條件",
+  "name_english": "學生姓名（英文）",
+  "name_chinese": "學生姓名（中文）",
+  "hkid_no": "香港身份證號碼",
+  "passport_no": "護照號碼",
+  "cic_no": "建造業議會編號",
+  "login_address": "帳號電郵",
+  "reset": "重設",
+  "search": "搜尋",
+  "cic_number": "建造業議會編號",
+  "no_data": "沒有資料"
+}

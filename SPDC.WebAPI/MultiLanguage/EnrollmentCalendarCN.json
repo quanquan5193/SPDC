@@ -1,0 +1,22 @@
+{
+  "Class_Commencement_Date": "开课日期",
+  "Class_Completion_Date": "完结日期",
+  "Course_Calendar": "上课时间表",
+  "Course_Code": "课程编号",
+  "Course_Name": "课程名称",
+  "Credits": "学分",
+  "for": null,
+  "Advanced_Certificate": "Credits Accumulated for Advanced Certificate",
+  "Duration": "授课期",
+  "Enrollment_Status": "Enrollment Status",
+  "Lesson_Time_From": "课堂时间由",
+  "Lesson_Time_To": "课堂时间至",
+  "Lesson_Date": "课堂日期",
+  "My_Courses": "我的课程",
+  "Re-exam_Time_From": "补考时间由",
+  "Re-exam_Time_To": "补考时间至",
+  "Re-exam_Date": "补考日期",
+  "Show_more": "显示更多",
+  "Venue": "地点",
+  "View_Details": "查看详情"
+}

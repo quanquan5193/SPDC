@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 17px;
+            font-family: MingLiU;
+        }
+
+        ,
+
+        div {
+            text-align: center;
+        }
+
+        ,
+
+        span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>你好，@Model.DisplayName!<br /></p>
+        <div>
+            @Model.CourseName
+            <span>領取證書通知書 (@Model.ClassCode)</span>
+        </div>
+        <p>
+            閣下的證書已經備妥，請參閱附件以了解領取詳情。<br /><br />
+        </p>
+        <p>
+            謝謝!<br /><br />
+        </p>
+        <p>
+            建造專業進修院校(SPDC)<br />
+            香港建造學院
+        </p>
+    </div>
+</body>
+
+</html>

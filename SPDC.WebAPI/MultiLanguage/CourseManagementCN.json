@@ -1,0 +1,35 @@
+{
+  "course_search_title": "搜尋課程",
+  "course_category": {
+    "label": "课程类别",
+    "option_BIM": "建筑信息模拟(BIM)",
+    "option_MIC": "组装合成建筑法(MiC)",
+    "option_gorvernment": "政府部门认可课程",
+    "option_work_contact": "公共工程合约认可课程",
+    "option_auto_cad": "电脑辅助绘图",
+    "option_contract_admin": "合约管理",
+    "option_technology_quality": "建造技术及品质",
+    "option_management": "建造管理",
+    "option_protection": "环境保护",
+    "option_built_heritage": "文物保育"
+  },
+  "course_name_en": "课程名称（英文）",
+  "course_name_cn": "課程名称（中文）",
+  "course_code": "课程编号",
+  "display_course_info": {
+    "label": "於网站显示课程资料",
+    "option_yes": "是",
+    "option_no": "否"
+  },
+  "button_reset": "重设",
+  "button_search": "搜寻",
+  "button_new": "建立新课程",
+  "duration": "授课期（总时数）",
+  "course_fee": "学费 (港币)",
+  "class_capacity": "每班学额",
+  "with_exam": "包含考试",
+  "with_module": "包含单元",
+  "button_prev": "上一页",
+  "button_next": "下一页",
+  "page": "页"
+}

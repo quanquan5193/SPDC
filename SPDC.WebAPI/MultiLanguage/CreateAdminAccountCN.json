@@ -1,0 +1,10 @@
+{
+  "create_edit_title": "建立/修改管理員帳戶",
+  "LDAP_account_input": "LDAP帳戶",
+  "email_address_input": "電郵地址",
+  "pulldown_course_code": "負責課程編號",
+  "pulldown_course_name": "負責課程名稱",
+  "button_add": "新增",
+  "button_remove": "移除",
+  "button_back": "返回"
+}
